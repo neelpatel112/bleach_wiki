@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLEACH — Soul Society Archives</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       CURSOR GLOW
+  ══════════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav class="navbar glass" id="navbar">
+    <div class="nav-logo">
+      <img src="icons/logo.png" alt="Bleach Logo" class="logo-img" onerror="this.style.display='none'; document.getElementById('logoText').style.display='block'" />
+      <span class="logo-text" id="logoText">BLEACH</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#gotei13" class="nav-link" data-section="gotei13">Gotei 13</a>
+      <a href="#espada" class="nav-link" data-section="espada">The Espada</a>
+      <a href="#sternritters" class="nav-link" data-section="sternritters">Sternritters</a>
+    </div>
+    <div class="nav-crest">
+      <svg class="shinigami-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="18" stroke="var(--gold)" stroke-width="1.5" opacity="0.6"/>
+        <path d="M20 4 L22 16 L20 20 L18 16 Z" fill="var(--gold)" opacity="0.8"/>
+        <path d="M20 36 L22 24 L20 20 L18 24 Z" fill="var(--gold)" opacity="0.8"/>
+        <path d="M4 20 L16 22 L20 20 L16 18 Z" fill="var(--gold)" opacity="0.8"/>
+        <path d="M36 20 L24 22 L20 20 L24 18 Z" fill="var(--gold)" opacity="0.8"/>
+        <circle cx="20" cy="20" r="3" fill="var(--gold)" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu glass" id="mobileMenu">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#gotei13" class="mobile-link">Gotei 13</a>
+    <a href="#espada" class="mobile-link">The Espada</a>
+    <a href="#sternritters" class="mobile-link">Sternritters</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <!-- Video Background -->
+    <div class="video-wrap">
+      <video autoplay muted loop playsinline class="hero-video" id="heroBg">
+        <source src="bleach.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge reveal-up" style="--delay: 0.1s">
+        <span class="badge-line"></span>
+        <span class="badge-text">TITE KUBO — 2001</span>
+        <span class="badge-line"></span>
+      </div>
+
+      <h1 class="hero-title reveal-up" style="--delay: 0.25s">
+        <span class="title-kanji">滅</span>
+        <span class="title-main">BLEACH</span>
+        <span class="title-kanji">却</span>
+      </h1>
+
+      <p class="hero-tagline reveal-up" style="--delay: 0.4s">
+        "The death and what comes after."
+      </p>
+
+      <p class="hero-desc reveal-up" style="--delay: 0.55s">
+        A realm where Shinigami, Hollows, and Quincy clash across dimensions —<br/>
+        an epic spanning Soul Society, Hueco Mundo, and the Shadow Realm.
+      </p>
+
+      <div class="hero-stats reveal-up" style="--delay: 0.7s">
+        <div class="stat-pill glass-pill">
+          <span class="stat-num">686</span>
+          <span class="stat-label">Chapters</span>
+        </div>
+        <div class="stat-pill glass-pill">
+          <span class="stat-num">366</span>
+          <span class="stat-label">Episodes</span>
+        </div>
+        <div class="stat-pill glass-pill">
+          <span class="stat-num">13</span>
+          <span class="stat-label">Divisions</span>
+        </div>
+      </div>
+
+      <div class="hero-cta reveal-up" style="--delay: 0.85s">
+        <a href="#gotei13" class="cta-btn primary-btn">Explore Factions</a>
+        <a href="#about-anime" class="cta-btn ghost-btn">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT ANIME STRIP
+  ══════════════════════════════════════════ -->
+  <section class="about-strip" id="about-anime">
+    <div class="strip-inner">
+      <div class="strip-text reveal-left">
+        <div class="section-eyebrow">THE LEGEND</div>
+        <h2 class="section-heading">Soul Reaper Chronicles</h2>
+        <p>Ichigo Kurosaki was a high school student with the rare ability to see ghosts — until a chance encounter with Rukia Kuchiki, a Soul Reaper, changed everything. Forced to absorb her powers, Ichigo steps into a war that has raged for millennia across the living world, Soul Society, and Hueco Mundo.</p>
+        <p>Three great factions. Infinite power. One impossible destiny.</p>
+        <div class="arcs-timeline">
+          <div class="arc-item">
+            <span class="arc-dot"></span>
+            <span class="arc-name">Soul Society Arc</span>
+          </div>
+          <div class="arc-item">
+            <span class="arc-dot espada-dot"></span>
+            <span class="arc-name">Arrancar / Hueco Mundo Arc</span>
+          </div>
+          <div class="arc-item">
+            <span class="arc-dot stern-dot"></span>
+            <span class="arc-name">Thousand-Year Blood War</span>
+          </div>
+        </div>
+      </div>
+      <div class="strip-visual reveal-right">
+        <div class="zanpakuto-display glass">
+          <div class="zanpakuto-wrap">
+            <svg class="zanpakuto-svg" viewBox="0 0 80 400" fill="none">
+              <!-- Blade -->
+              <rect x="36" y="20" width="8" height="300" rx="2" fill="url(#bladeGrad)" />
+              <polygon points="36,20 44,20 40,2" fill="url(#bladeGrad)" />
+              <!-- Fuller -->
+              <rect x="39" y="30" width="2" height="270" rx="1" fill="rgba(255,255,255,0.4)" />
+              <!-- Guard -->
+              <ellipse cx="40" cy="320" rx="22" ry="8" fill="url(#goldGrad)" />
+              <ellipse cx="40" cy="322" rx="20" ry="6" fill="var(--gold)" opacity="0.4"/>
+              <!-- Grip -->
+              <rect x="36" y="325" width="8" height="55" rx="3" fill="url(#gripGrad)" />
+              <!-- Pommel -->
+              <ellipse cx="40" cy="382" rx="7" ry="4" fill="var(--gold)" />
+              <defs>
+                <linearGradient id="bladeGrad" x1="36" y1="2" x2="44" y2="320" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#e8e8ff"/>
+                  <stop offset="50%" stop-color="#b8c8ff"/>
+                  <stop offset="100%" stop-color="#6080c0"/>
+                </linearGradient>
+                <linearGradient id="goldGrad" x1="18" y1="320" x2="62" y2="330" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#8b6f2a"/>
+                  <stop offset="50%" stop-color="#d4a017"/>
+                  <stop offset="100%" stop-color="#8b6f2a"/>
+                </linearGradient>
+                <linearGradient id="gripGrad" x1="36" y1="325" x2="44" y2="380" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#1a1a2e"/>
+                  <stop offset="100%" stop-color="#0d0d1a"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="zanpakuto-glow"></div>
+          </div>
+          <div class="zanpakuto-label">
+            <span class="z-kanji">月 牙 天 衝</span>
+            <span class="z-name">Getsuga Tenshō</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       GOTEI 13 SECTION
+  ══════════════════════════════════════════ -->
+  <section class="faction-section gotei-section" id="gotei13">
+    <div class="faction-bg-text">GOTEI</div>
+
+    <div class="faction-header reveal-up">
+      <div class="faction-symbol">
+        <svg viewBox="0 0 60 60" fill="none">
+          <circle cx="30" cy="30" r="28" stroke="var(--gotei-blue)" stroke-width="1.5"/>
+          <path d="M30 6 L32 28 L30 32 L28 28 Z" fill="var(--gotei-blue)"/>
+          <path d="M30 54 L32 32 L30 28 L28 32 Z" fill="var(--gotei-blue)"/>
+          <path d="M6 30 L28 32 L32 30 L28 28 Z" fill="var(--gotei-blue)"/>
+          <path d="M54 30 L32 32 L28 30 L32 28 Z" fill="var(--gotei-blue)"/>
+          <circle cx="30" cy="30" r="4" fill="var(--gotei-blue)"/>
+        </svg>
+      </div>
+      <div class="faction-title-block">
+        <span class="faction-eyebrow">Soul Society</span>
+        <h2 class="faction-name">Gotei 13</h2>
+        <p class="faction-subtitle">護廷十三隊 — The 13 Court Guard Squads</p>
+      </div>
+    </div>
+
+    <p class="faction-desc reveal-up">
+      The primary military branch of Soul Society — thirteen divisions, each led by a Captain of immense power. They are the first and last line of defense against Hollows and all threats to the balance of the world.
+    </p>
+
+    <!-- Character Cards -->
+    <div class="character-grid" id="goteiGrid">
+      <!-- Cards injected by JS -->
+    </div>
+
+    <!-- Gallery Strip -->
+    <div class="gallery-strip reveal-up">
+      <div class="gallery-label">
+        <span class="gallery-eyebrow">Gallery</span>
+        <h3>Gotei 13 — Moments</h3>
+        <p>Add your images to <code>images/gotei/</code></p>
+      </div>
+      <div class="gallery-scroll" id="goteiGallery">
+        <div class="gallery-placeholder glass" data-img="images/gotei/01.jpg">
+          <span class="ph-icon">⚔</span>
+          <span class="ph-label">Soul Society</span>
+        </div>
+        <div class="gallery-placeholder glass" data-img="images/gotei/02.jpg">
+          <span class="ph-icon">🌸</span>
+          <span class="ph-label">Senbonzakura</span>
+        </div>
+        <div class="gallery-placeholder glass" data-img="images/gotei/03.jpg">
+          <span class="ph-icon">⚡</span>
+          <span class="ph-label">Bankai</span>
+        </div>
+        <div class="gallery-placeholder glass" data-img="images/gotei/04.jpg">
+          <span class="ph-icon">🔥</span>
+          <span class="ph-label">Yamamoto</span>
+        </div>
+        <div class="gallery-placeholder glass" data-img="images/gotei/05.jpg">
+          <span class="ph-icon">🌊</span>
+          <span class="ph-label">Ukitake</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       THE ESPADA SECTION
+  ══════════════════════════════════════════ -->
+  <section class="faction-section espada-section" id="espada">
+    <div class="faction-bg-text">ESPADA</div>
+
+    <div class="faction-header reveal-up">
+      <div class="faction-symbol espada-symbol">
+        <svg viewBox="0 0 60 60" fill="none">
+          <path d="M30 4 L56 50 L30 38 L4 50 Z" stroke="var(--espada-red)" stroke-width="1.5" fill="none"/>
+          <path d="M30 15 L48 46 L30 36 L12 46 Z" fill="var(--espada-red)" opacity="0.2"/>
+          <circle cx="30" cy="26" r="5" fill="var(--espada-red)" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="faction-title-block">
+        <span class="faction-eyebrow">Hueco Mundo</span>
+        <h2 class="faction-name espada-name">The Espada</h2>
+        <p class="faction-subtitle">十刃 — Ten Blades of Aizen Sōsuke</p>
+      </div>
+    </div>
+
+    <p class="faction-desc reveal-up">
+      The ten most powerful Arrancar in Sōsuke Aizen's army. Hollows who have achieved a human-like form, stripped of their masks yet retaining monstrous power. Each carries a number tattooed on their body — a rank of devastation.
+    </p>
+
+    <div class="character-grid" id="espadaGrid">
+      <!-- Cards injected by JS -->
+    </div>
+
+    <div class="gallery-strip reveal-up">
+      <div class="gallery-label">
+        <span class="gallery-eyebrow">Gallery</span>
+        <h3>Hueco Mundo — Shadows</h3>
+        <p>Add your images to <code>images/espada/</code></p>
+      </div>
+      <div class="gallery-scroll" id="espadaGallery">
+        <div class="gallery-placeholder glass espada-ph" data-img="images/espada/01.jpg">
+          <span class="ph-icon">🌑</span>
+          <span class="ph-label">Las Noches</span>
+        </div>
+        <div class="gallery-placeholder glass espada-ph" data-img="images/espada/02.jpg">
+          <span class="ph-icon">💀</span>
+          <span class="ph-label">Ulquiorra</span>
+        </div>
+        <div class="gallery-placeholder glass espada-ph" data-img="images/espada/03.jpg">
+          <span class="ph-icon">🦅</span>
+          <span class="ph-label">Grimmjow</span>
+        </div>
+        <div class="gallery-placeholder glass espada-ph" data-img="images/espada/04.jpg">
+          <span class="ph-icon">🌊</span>
+          <span class="ph-label">Stark</span>
+        </div>
+        <div class="gallery-placeholder glass espada-ph" data-img="images/espada/05.jpg">
+          <span class="ph-icon">🌀</span>
+          <span class="ph-label">Resurreccion</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       STERNRITTERS SECTION
+  ══════════════════════════════════════════ -->
+  <section class="faction-section stern-section" id="sternritters">
+    <div class="faction-bg-text">STERN</div>
+
+    <div class="faction-header reveal-up">
+      <div class="faction-symbol stern-symbol">
+        <svg viewBox="0 0 60 60" fill="none">
+          <polygon points="30,4 36,24 58,24 40,36 46,58 30,44 14,58 20,36 2,24 24,24" stroke="var(--stern-white)" stroke-width="1.5" fill="none"/>
+          <polygon points="30,14 34,26 46,26 36,33 40,46 30,38 20,46 24,33 14,26 26,26" fill="var(--stern-white)" opacity="0.15"/>
+        </svg>
+      </div>
+      <div class="faction-title-block">
+        <span class="faction-eyebrow">Wandenreich</span>
+        <h2 class="faction-name stern-name">Sternritters</h2>
+        <p class="faction-subtitle">星十字騎士団 — Star Cross Knight Order</p>
+      </div>
+    </div>
+
+    <p class="faction-desc reveal-up">
+      Elite Quincy warriors of the Wandenreich — the hidden empire of Yhwach. Each bears a Schrift, a letter designating their unique power. Ruthless, methodical, and ancient, they shattered Soul Society in a single invasion.
+    </p>
+
+    <div class="character-grid" id="sternGrid">
+      <!-- Cards injected by JS -->
+    </div>
+
+    <div class="gallery-strip reveal-up">
+      <div class="gallery-label">
+        <span class="gallery-eyebrow">Gallery</span>
+        <h3>Wandenreich — Empire</h3>
+        <p>Add your images to <code>images/sternritters/</code></p>
+      </div>
+      <div class="gallery-scroll" id="sternGallery">
+        <div class="gallery-placeholder glass stern-ph" data-img="images/sternritters/01.jpg">
+          <span class="ph-icon">✦</span>
+          <span class="ph-label">Yhwach</span>
+        </div>
+        <div class="gallery-placeholder glass stern-ph" data-img="images/sternritters/02.jpg">
+          <span class="ph-icon">❄️</span>
+          <span class="ph-label">Uryu</span>
+        </div>
+        <div class="gallery-placeholder glass stern-ph" data-img="images/sternritters/03.jpg">
+          <span class="ph-icon">⚡</span>
+          <span class="ph-label">Bazz-B</span>
+        </div>
+        <div class="gallery-placeholder glass stern-ph" data-img="images/sternritters/04.jpg">
+          <span class="ph-icon">🌪</span>
+          <span class="ph-label">Quilge</span>
+        </div>
+        <div class="gallery-placeholder glass stern-ph" data-img="images/sternritters/05.jpg">
+          <span class="ph-icon">🌸</span>
+          <span class="ph-label">Giselle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       QUOTE BREAKER
+  ══════════════════════════════════════════ -->
+  <section class="quote-section">
+    <div class="quote-inner reveal-up">
+      <div class="quote-marks">"</div>
+      <blockquote class="rotating-quote" id="rotatingQuote">
+        Fear is necessary for evolution. The fear that one could be destroyed at any moment.
+      </blockquote>
+      <cite class="quote-author" id="quoteAuthor">— Sosuke Aizen</cite>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer glass">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="icons/logo.png" alt="Bleach" class="footer-logo" onerror="this.style.display='none'" />
+        <span class="footer-brand-text">BLEACH</span>
+        <p class="footer-brand-sub">Soul Society Archives</p>
+      </div>
+      <div class="footer-links-col">
+        <span class="footer-col-title">Factions</span>
+        <a href="#gotei13">Gotei 13</a>
+        <a href="#espada">The Espada</a>
+        <a href="#sternritters">Sternritters</a>
+      </div>
+      <div class="footer-links-col">
+        <span class="footer-col-title">Explore</span>
+        <a href="#home">Home</a>
+        <a href="#about-anime">About</a>
+        <a href="https://en.wikipedia.org/wiki/Bleach_(manga)" target="_blank" rel="noreferrer">Wiki ↗</a>
+      </div>
+      <div class="footer-social">
+        <span class="footer-col-title">Developer</span>
+        <p class="dev-name">Neel Patel</p>
+        <div class="social-links">
+          <a href="https://github.com/neelpatel112" target="_blank" rel="noreferrer" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a href="https://vercel.com" target="_blank" rel="noreferrer" class="social-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+            Vercel
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-divider"></div>
+      <p class="footer-copy">
+        © 2025 <strong>Neel Patel</strong>. Built with passion for the soul. &nbsp;|&nbsp;
+        BLEACH © Tite Kubo / Shueisha / TV Tokyo — Fan project, not affiliated.
+      </p>
+      <p class="footer-kanji">護廷十三隊</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+ 
