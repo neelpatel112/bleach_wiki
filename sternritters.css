@@ -1,0 +1,8 @@
+/* sternritters.css — Silver/White theme */
+.theme-stern {
+  --faction-color: #a0a8c0;
+  --faction-glow:  rgba(160,168,192,0.2);
+}
+.theme-stern .char-card:hover { border-color:rgba(232,232,245,.22); box-shadow:0 20px 70px rgba(160,168,192,.15); }
+.theme-stern .nav-link.active { background:rgba(232,232,245,.05); }
+ 
