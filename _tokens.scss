@@ -1,0 +1,63 @@
+// ══════════════════════════════════════════════════════════════
+//  BLEACH — Design Tokens
+//  _tokens.scss
+// ══════════════════════════════════════════════════════════════
+
+// ── PALETTE ─────────────────────────────────────────────────
+$bg-deep:         #04040d;
+$bg-mid:          #080818;
+$bg-surface:      #0e0e24;
+$bg-card:         #0a0a1e;
+
+$gold:            #c9a84c;
+$gold-light:      #f0d080;
+$gold-dim:        #7a5e20;
+$gold-glow:       rgba(201, 168, 76, 0.35);
+
+$gotei-blue:      #4a90e2;
+$gotei-mid:       #2a6abf;
+$gotei-glow:      rgba(74, 144, 226, 0.3);
+$gotei-soft:      rgba(74, 144, 226, 0.08);
+
+$espada-red:      #c0392b;
+$espada-light:    #e74c3c;
+$espada-glow:     rgba(192, 57, 43, 0.3);
+$espada-soft:     rgba(192, 57, 43, 0.08);
+
+$stern-white:     #e8e8f5;
+$stern-silver:    #a0a8c0;
+$stern-glow:      rgba(232, 232, 245, 0.2);
+$stern-soft:      rgba(232, 232, 245, 0.05);
+
+$text-primary:    #f0f0ff;
+$text-secondary:  #9090b0;
+$text-muted:      #505080;
+
+$glass-bg:        rgba(255, 255, 255, 0.04);
+$glass-border:    rgba(255, 255, 255, 0.08);
+$glass-blur:      18px;
+
+// ── TYPOGRAPHY ──────────────────────────────────────────────
+$font-display:    'Cinzel Decorative', serif;
+$font-heading:    'Cinzel', serif;
+$font-body:       'Rajdhani', sans-serif;
+$font-jp:         'Noto Serif JP', serif;
+
+// ── SPACING ─────────────────────────────────────────────────
+$nav-h:           72px;
+$section-pad:     120px;
+$section-pad-sm:  80px;
+$section-pad-xs:  48px;
+
+// ── RADII ───────────────────────────────────────────────────
+$r-sm:  8px;
+$r-md:  16px;
+$r-lg:  24px;
+$r-xl:  32px;
+
+// ── TRANSITIONS ─────────────────────────────────────────────
+$ease-out:  cubic-bezier(0.25, 0.8, 0.25, 1);
+$ease-in:   cubic-bezier(0.4, 0, 1, 1);
+$ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+$speed:     0.4s;
+ 
