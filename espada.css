@@ -1,0 +1,8 @@
+/* espada.css — Red theme */
+.theme-espada {
+  --faction-color: #e74c3c;
+  --faction-glow:  rgba(231,76,60,0.3);
+}
+.theme-espada .char-card:hover { border-color:rgba(231,76,60,.4); box-shadow:0 20px 70px rgba(192,57,43,.22); }
+.theme-espada .nav-link.active { background:rgba(192,57,43,.08); }
+ 
