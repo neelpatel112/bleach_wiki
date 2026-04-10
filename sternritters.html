@@ -16,11 +16,12 @@
   <div class="cursor-orb" id="cursorOrb"></div>
   <div class="cursor-glow" id="cursorGlow"></div>
 
+  <!-- NAVBAR -->
   <nav class="navbar glass" id="navbar">
     <a class="nav-logo" href="index.html">
-      <img src="icons/logo.png" alt="Bleach" class="logo-img" id="navLogo"
-           onerror="this.style.display='none';document.getElementById('navWordmark').style.display='block'"/>
-      <span class="logo-wordmark" id="navWordmark">BLEACH</span>
+      <img src="icons/logo.png" alt="Bleach" class="logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-wordmark" style="display:none">BLEACH</span>
     </a>
     <div class="nav-links">
       <a href="index.html"        class="nav-link">Home</a>
@@ -30,7 +31,8 @@
     </div>
     <div class="nav-crest">
       <svg viewBox="0 0 40 40" fill="none">
-        <polygon points="20,3 23,15 36,15 26,22 30,35 20,28 10,35 14,22 4,15 17,15" stroke="var(--faction-color)" stroke-width="1.2" fill="none"/>
+        <polygon points="20,3 23,15 36,15 26,22 30,35 20,28 10,35 14,22 4,15 17,15"
+                 stroke="var(--faction-color)" stroke-width="1.2" fill="none"/>
       </svg>
     </div>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
@@ -62,7 +64,7 @@
         They shattered Soul Society in a single night — then came back a second time.
       </p>
       <div class="hero-pills reveal" style="--d:.52s">
-        <div class="pill"><span class="pill-num">26</span><span class="pill-label">Letters</span></div>
+        <div class="pill"><span class="pill-num">26</span><span class="pill-label">Schrift Letters</span></div>
         <div class="pill"><span class="pill-num">1000</span><span class="pill-label">Years Hidden</span></div>
         <div class="pill"><span class="pill-num">2</span><span class="pill-label">Invasions</span></div>
       </div>
@@ -76,8 +78,8 @@
       <div class="ov-text reveal from-left">
         <span class="f-eyebrow">OVERVIEW</span>
         <h2 class="f-heading">The Star Cross Knights</h2>
-        <p>The Sternritters (星十字騎士団, Sternritter; German for "Star Knights") are the elite Quincy warriors of the Wandenreich — the hidden empire ruled by Yhwach, the Father of the Quincy and progenitor of Ichigo's bloodline. They have lived in secret for over a thousand years, nursing their hatred of Soul Society for the genocide of their kind.</p>
-        <p>Each Sternritter is granted a Schrift (聖文字, lit. "Sacred Writing") — a letter from A to Z that defines a unique, catastrophic power. In the Wandenreich's two invasions, they systematically defeated Shinigami Captains, stole their Bankai, and pushed Soul Society to the edge of extinction.</p>
+        <p>The Sternritters (星十字騎士団) are the elite Quincy warriors of the Wandenreich — the hidden empire ruled by Yhwach, the Father of the Quincy. Hidden for over a thousand years, nursing their hatred of Soul Society for the genocide of their kind centuries ago.</p>
+        <p>Each Sternritter is granted a Schrift — a lettered power unique to them, ranging from A to Z. In two consecutive invasions, they systematically defeated Shinigami Captains, stole their Bankai, and pushed Soul Society to total collapse.</p>
         <div class="ov-pillars">
           <div class="pillar"><span class="pillar-icon">✦</span><span>Schrift Powers</span></div>
           <div class="pillar"><span class="pillar-icon">🏹</span><span>Quincy Arrows</span></div>
@@ -87,11 +89,14 @@
       <div class="ov-emblem reveal from-right">
         <div class="emblem-glow-wrap">
           <svg class="faction-emblem" viewBox="0 0 200 200" fill="none">
-            <polygon points="100,8 114,58 166,58 122,88 140,140 100,112 60,140 78,88 34,58 86,58" stroke="var(--faction-color)" stroke-width="1.5" opacity=".4"/>
-            <polygon points="100,8 114,58 166,58 122,88 140,140 100,112 60,140 78,88 34,58 86,58" fill="var(--faction-color)" opacity=".04"/>
-            <polygon points="100,35 110,68 145,68 117,87 128,122 100,103 72,122 83,87 55,68 90,68" stroke="var(--faction-color)" stroke-width="1" opacity=".2"/>
+            <polygon points="100,8 114,58 166,58 122,88 140,140 100,112 60,140 78,88 34,58 86,58"
+                     stroke="var(--faction-color)" stroke-width="1.5" opacity=".4"/>
+            <polygon points="100,8 114,58 166,58 122,88 140,140 100,112 60,140 78,88 34,58 86,58"
+                     fill="var(--faction-color)" opacity=".04"/>
+            <polygon points="100,35 110,68 145,68 117,87 128,122 100,103 72,122 83,87 55,68 90,68"
+                     stroke="var(--faction-color)" stroke-width="1" opacity=".2"/>
             <circle cx="100" cy="100" r="12" fill="var(--faction-color)" opacity=".85"/>
-            <circle cx="100" cy="100" r="5"  fill="var(--bg-deep)"/>
+            <circle cx="100" cy="100" r="5" fill="var(--bg-deep)"/>
           </svg>
           <div class="emblem-ring-glow"></div>
         </div>
@@ -101,14 +106,298 @@
     </div>
   </section>
 
-  <!-- CHARACTER ROSTER -->
+  <!-- ══════════════════════════════════════════
+       STERNRITTER ROSTER — HARDCODED
+  ══════════════════════════════════════════ -->
   <section class="roster-section" id="roster">
     <div class="roster-header reveal">
       <span class="f-eyebrow">STERNRITTER ROSTER</span>
       <h2 class="f-heading">The Lettered Warriors</h2>
-      <p class="f-sub">Each letter is a unique catastrophic power. Add images to <code>images/sternritters/</code>.</p>
     </div>
-    <div class="char-grid" id="charGrid"></div>
+
+    <div class="char-grid">
+
+      <!-- YHWACH -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/yhwach.jpg" alt="Yhwach" loading="lazy"
+               onerror="window.imgFallback(this,'👑')"/>
+          <span class="schrift-badge">A</span>
+          <span class="card-badge">His Majesty · Emperor</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift A — The Almighty</span>
+          <h3 class="card-name">Yhwach</h3>
+          <p class="card-rank">Emperor of the Wandenreich · Father of the Quincy</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: A</span>
+          <span class="card-power-sub">The Almighty</span>
+          <p class="card-ability">The Almighty grants foresight and the power to modify all futures he has foreseen. He can also perform Auswählen — reclaiming the powers of Quincy he deems weak. As the progenitor of all Quincy, his blood flows through Ichigo, making him a linchpin of the entire conflict's origin.</p>
+          <blockquote class="card-quote">"Everything that exists in this world moves according to my will — including you."</blockquote>
+        </div>
+      </article>
+
+      <!-- HASCHWALTH -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/haschwalth.jpg" alt="Jugram Haschwalth" loading="lazy"
+               onerror="window.imgFallback(this,'⚖')"/>
+          <span class="schrift-badge">B</span>
+          <span class="card-badge">Grand Master</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift B — The Balance</span>
+          <h3 class="card-name">Jugram Haschwalth</h3>
+          <p class="card-rank">Grand Master of the Sternritters · Yhwach's Right Hand</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: B</span>
+          <span class="card-power-sub">The Balance</span>
+          <p class="card-ability">The Balance — any misfortune that befalls Haschwalth is automatically redistributed to his enemies. He is functionally untouchable. While Yhwach sleeps, Haschwalth holds the Almighty in his place, becoming the most powerful being in existence during those hours.</p>
+          <blockquote class="card-quote">"The scales of the world must remain balanced. Enforcing that balance — that is my sole purpose."</blockquote>
+        </div>
+      </article>
+
+      <!-- URYU -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/uryu.jpg" alt="Uryū Ishida" loading="lazy"
+               onerror="window.imgFallback(this,'✦')"/>
+          <span class="schrift-badge">A</span>
+          <span class="card-badge">Yhwach's Successor</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift A — The Antithesis</span>
+          <h3 class="card-name">Uryū Ishida</h3>
+          <p class="card-rank">Yhwach's Chosen Successor · Last Quincy</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: A</span>
+          <span class="card-power-sub">The Antithesis</span>
+          <p class="card-ability">The Antithesis — reverses anything that has occurred between two designated targets. Damage, healing, status — all of it is swapped. As the sole survivor of Yhwach's Auswählen as a child, he carries a unique resistance. His true goal throughout the final arc is to destroy Yhwach from the inside.</p>
+          <blockquote class="card-quote">"I walk my own path. Even if that path leads straight through the heart of my enemy."</blockquote>
+        </div>
+      </article>
+
+      <!-- BAZZ-B -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/bazzb.jpg" alt="Bazz-B" loading="lazy"
+               onerror="window.imgFallback(this,'🔥')"/>
+          <span class="schrift-badge">H</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift H — The Heat</span>
+          <h3 class="card-name">Bazz-B</h3>
+          <p class="card-rank">Sternritter H · Childhood Friend of Haschwalth</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: H</span>
+          <span class="card-power-sub">The Heat</span>
+          <p class="card-ability">The Heat — fires devastating fire attacks from his index fingers. The output scales exponentially as he takes more damage in battle. One finger can incinerate a Captain-level opponent. Five fingers simultaneously is considered his maximum — enough to destroy an entire battlefield.</p>
+          <blockquote class="card-quote">"I'll burn everything to the ground — starting with you, then working my way up to him."</blockquote>
+        </div>
+      </article>
+
+      <!-- ÄS NÖDT -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/asnödt.jpg" alt="Äs Nödt" loading="lazy"
+               onerror="window.imgFallback(this,'🕸')"/>
+          <span class="schrift-badge">F</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift F — The Fear</span>
+          <h3 class="card-name">Äs Nödt</h3>
+          <p class="card-rank">Sternritter F · Wielder of Byakuya's Bankai</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: F</span>
+          <span class="card-power-sub">The Fear</span>
+          <p class="card-ability">The Fear — injects thorns into victims' bodies that amplify the base emotion of fear beyond all rational thought. The fear produced is not emotional — it is a direct attack on the nervous system, causing complete paralysis. His Vollständig: Tatarforas reveals his true, horrific form.</p>
+          <blockquote class="card-quote">"I don't create fear. I simply reveal what was always hiding there, underneath everything."</blockquote>
+        </div>
+      </article>
+
+      <!-- BG9 -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/bg9.jpg" alt="BG9" loading="lazy"
+               onerror="window.imgFallback(this,'🤖')"/>
+          <span class="schrift-badge">K</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift K — The Killer</span>
+          <h3 class="card-name">BG9</h3>
+          <p class="card-rank">Sternritter K · Mechanical Quincy Warrior</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: K</span>
+          <span class="card-power-sub">The Killer</span>
+          <p class="card-ability">A mechanized body housing multiple simultaneous weapon systems — guided missiles, energy blasts, tentacle cables, and rapid-fire projectiles. Can operate multiple weapon systems simultaneously. Fought and nearly defeated Suì-Fēng, stealing classified information from Soul Society during the first invasion.</p>
+          <blockquote class="card-quote">"Target acquired. Combat parameters set. Elimination commencing."</blockquote>
+        </div>
+      </article>
+
+      <!-- CANDICE -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/candice.jpg" alt="Candice Catnipp" loading="lazy"
+               onerror="window.imgFallback(this,'⚡')"/>
+          <span class="schrift-badge">T</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift T — The Thunderbolt</span>
+          <h3 class="card-name">Candice Catnipp</h3>
+          <p class="card-rank">Sternritter T · Lightning Goddess</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: T</span>
+          <span class="card-power-sub">The Thunderbolt</span>
+          <p class="card-ability">The Thunderbolt generates and fires a colossal lightning column capable of vaporizing anything in its path. She can absorb electricity to power and heal herself, then redirect the absorbed energy as amplified attacks. Her Vollständig gives her lightning wings and massively increases output.</p>
+          <blockquote class="card-quote">"You want to mess with me? Fine — but don't come crying when I've fried every cell in your body."</blockquote>
+        </div>
+      </article>
+
+      <!-- CANG DU -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/cangdu.jpg" alt="Cang Du" loading="lazy"
+               onerror="window.imgFallback(this,'🛡')"/>
+          <span class="schrift-badge">I</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift I — The Iron</span>
+          <h3 class="card-name">Cang Du</h3>
+          <p class="card-rank">Sternritter I · Wielder of Hitsugaya's Bankai</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: I</span>
+          <span class="card-power-sub">The Iron</span>
+          <p class="card-ability">The Iron — reinforces his skin to a level that deflects virtually all spiritual attacks, including Bankai strikes. Stole Hitsugaya's Daiguren Hyōrinmaru during the first invasion and used it against Soul Society's own forces. One of the first Sternritters executed by Yhwach for failing in the second invasion.</p>
+          <blockquote class="card-quote">"True strength is not the blade. It is the skin that no blade can cut."</blockquote>
+        </div>
+      </article>
+
+      <!-- GISELLE -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/giselle.jpg" alt="Giselle Gewelle" loading="lazy"
+               onerror="window.imgFallback(this,'🧟')"/>
+          <span class="schrift-badge">Z</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift Z — The Zombie</span>
+          <h3 class="card-name">Giselle Gewelle</h3>
+          <p class="card-rank">Sternritter Z · Necromancer of the Wandenreich</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: Z</span>
+          <span class="card-power-sub">The Zombie</span>
+          <p class="card-ability">The Zombie — anyone who touches Giselle's blood becomes a perfectly obedient zombie under her control. This works on Shinigami just as effectively as it does on Quincy and humans. She zombified Captain Tōshirō Hitsugaya and used him as a weapon against his own allies.</p>
+          <blockquote class="card-quote">"Death is just the beginning of real loyalty. The dead never disobey."</blockquote>
+        </div>
+      </article>
+
+      <!-- LILTOTTO -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/liltotto.jpg" alt="Liltotto Lamperd" loading="lazy"
+               onerror="window.imgFallback(this,'👄')"/>
+          <span class="schrift-badge">G</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift G — The Glutton</span>
+          <h3 class="card-name">Liltotto Lamperd</h3>
+          <p class="card-rank">Sternritter G · Survivor of Yhwach's Betrayal</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: G</span>
+          <span class="card-power-sub">The Glutton</span>
+          <p class="card-ability">The Glutton — a gigantic mouth that extends from her small frame capable of consuming anything: opponents, their abilities, spiritual constructs, even the ground itself. Survived Yhwach's Auswählen along with Giselle and later allied with the Shinigami out of a desire for revenge against Yhwach himself.</p>
+          <blockquote class="card-quote">"Everything looks edible when you're hungry enough — and right now, I'm starving for payback."</blockquote>
+        </div>
+      </article>
+
+      <!-- MASK -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/mask.jpg" alt="Mask De Masculine" loading="lazy"
+               onerror="window.imgFallback(this,'🤼')"/>
+          <span class="schrift-badge">S</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift S — The Superstar</span>
+          <h3 class="card-name">Mask De Masculine</h3>
+          <p class="card-rank">Sternritter S · The People's Champion</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: S</span>
+          <span class="card-power-sub">The Superstar</span>
+          <p class="card-ability">The Superstar — gains power exponentially from cheers and applause. His cheerleader James exists solely to cheer for him, and as long as James cheers, Mask becomes stronger and can even heal from fatal wounds. He defeated both Renji Abarai and Rukia Kuchiki simultaneously at full strength.</p>
+          <blockquote class="card-quote">"Everyone loves a winner — and I have never, ever lost! The crowd demands a hero!"</blockquote>
+        </div>
+      </article>
+
+      <!-- NANANA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/nanana.jpg" alt="NaNaNa Najahkoop" loading="lazy"
+               onerror="window.imgFallback(this,'🔱')"/>
+          <span class="schrift-badge">U</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift U — The Underbelly</span>
+          <h3 class="card-name">NaNaNa Najahkoop</h3>
+          <p class="card-rank">Sternritter U · Analyst Warrior</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: U</span>
+          <span class="card-power-sub">The Underbelly</span>
+          <p class="card-ability">The Underbelly — creates a pressure map of an opponent's spiritual energy distribution, revealing the precise gaps and weak points in their power that can be exploited. Every attack he launches targets these identified weaknesses with surgical precision, bypassing conventional defense entirely.</p>
+          <blockquote class="card-quote">"Every defense has a gap. I find it in seconds — then I exploit it until there's nothing left."</blockquote>
+        </div>
+      </article>
+
+      <!-- PERNIDA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/pernida.jpg" alt="Pernida Parnkgjas" loading="lazy"
+               onerror="window.imgFallback(this,'🖐')"/>
+          <span class="schrift-badge">C</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift C — The Compulsory</span>
+          <h3 class="card-name">Pernida Parnkgjas</h3>
+          <p class="card-rank">Sternritter C · Left Hand of the Soul King</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: C</span>
+          <span class="card-power-sub">The Compulsory</span>
+          <p class="card-ability">The Compulsory — nerves extend outward to control and restructure the physical composition of anything they touch, bending bone, metal, and flesh alike. Can forcibly evolve its own power to overcome any ability it encounters, adapting in real-time. Its true form is the detached left hand of the Soul King itself.</p>
+          <blockquote class="card-quote">"I will bend everything — your bones, your blade, and ultimately your will."</blockquote>
+        </div>
+      </article>
+
+      <!-- ROBERT -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/sternritters/robert.jpg" alt="Robert Accutrone" loading="lazy"
+               onerror="window.imgFallback(this,'🎯')"/>
+          <span class="schrift-badge">R</span>
+          <span class="card-badge">Sternritter</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Schrift R — The Rangi Range</span>
+          <h3 class="card-name">Robert Accutrone</h3>
+          <p class="card-rank">Sternritter R · Long-Range Precision Fighter</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Schrift: R</span>
+          <span class="card-power-sub">The Rangi Range</span>
+          <p class="card-ability">The Rangi Range — spatially compresses the effective range of his shots, allowing attacks to bypass conventional defenses through dimensional shortcutting. His bullets do not travel through normal space — they arrive. Engaged Shunsui Kyōraku during the first invasion, wounding the future Captain-Commander.</p>
+          <blockquote class="card-quote">"Range is irrelevant to me. Distance is just a number — and I always hit exactly what I aim for."</blockquote>
+        </div>
+      </article>
+
+    </div><!-- /char-grid -->
   </section>
 
   <div class="back-nav">
@@ -116,26 +405,33 @@
     <a href="index.html"  class="next-btn">Back to Home →</a>
   </div>
 
+  <!-- FOOTER -->
   <footer class="site-footer glass">
     <div class="footer-grid">
       <div class="f-brand">
         <img src="icons/logo.png" alt="Bleach" class="f-logo" onerror="this.style.display='none'"/>
-        <span class="f-name">BLEACH</span><span class="f-tagline">Soul Society Archives</span>
+        <span class="f-name">BLEACH</span>
+        <span class="f-tagline">Soul Society Archives</span>
       </div>
       <div class="f-col">
         <span class="f-col-title">Factions</span>
-        <a href="gotei.html">Gotei 13</a><a href="espada.html">The Espada</a><a href="sternritters.html">Sternritters</a>
+        <a href="gotei.html">Gotei 13</a>
+        <a href="espada.html">The Espada</a>
+        <a href="sternritters.html">Sternritters</a>
       </div>
       <div class="f-col">
         <span class="f-col-title">Navigate</span>
-        <a href="index.html">Home</a><a href="#roster">Roster</a>
+        <a href="index.html">Home</a>
+        <a href="#roster">Roster</a>
       </div>
       <div class="f-dev">
         <span class="f-col-title">Developer</span>
         <span class="dev-name">Neel Patel</span>
         <div class="social-row">
           <a href="https://github.com/neelpatel112" target="_blank" rel="noreferrer" class="soc-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
     </div>
@@ -147,28 +443,6 @@
 
   <script src="js/shared.js"></script>
   <script src="js/faction.js"></script>
-  <script>
-    window.FACTION_DATA = {
-      name: "stern",
-      accentVar: "--stern-silver",
-      characters: [
-        { name:"Yhwach",               rank:"His Majesty · Emperor",      division:"Schrift: A — Almighty",   img:"images/sternritters/yhwach.jpg",       icon:"👑", schrift:"A",  ability:"The Almighty — foresight and the power to modify all futures; Auswählen to reclaim power from other Quincy; progenitor of the Quincy bloodline",                  quote:"\"Everything that exists in this world moves according to my will.\"" },
-        { name:"Jugram Haschwalth",    rank:"Grand Master",               division:"Schrift: B — Balance",    img:"images/sternritters/haschwalth.jpg",   icon:"⚖", schrift:"B",  ability:"The Balance — any misfortune that befalls him is redistributed to his enemies; holds Almighty while Yhwach sleeps",                                              quote:"\"The scales of the world must remain balanced. That is my purpose.\"" },
-        { name:"Uryū Ishida",          rank:"Yhwach's Successor",         division:"Schrift: A — Antithesis", img:"images/sternritters/uryu.jpg",         icon:"✦", schrift:"A",  ability:"The Antithesis — reverses anything that has happened between two designated targets; the only survivor of Yhwach's Auswählen as a child",                          quote:"\"I walk my own path. Even if it leads through the heart of the enemy.\"" },
-        { name:"Bazz-B",               rank:"Sternritter",                division:"Schrift: H — Heat",       img:"images/sternritters/bazzb.jpg",        icon:"🔥", schrift:"H",  ability:"The Heat — fires devastating fire attacks from his index fingers; output scales exponentially as he takes damage",                                                 quote:"\"I'll burn everything — starting with you.\"" },
-        { name:"Äs Nödt",             rank:"Sternritter",                division:"Schrift: F — Fear",       img:"images/sternritters/asnödt.jpg",       icon:"🕸", schrift:"F",  ability:"The Fear — injects thorns into victims that amplify the base emotion of fear beyond rational thought, paralyzing them entirely",                                  quote:"\"I don't create fear. I reveal what was always there.\"" },
-        { name:"BG9",                  rank:"Sternritter",                division:"Schrift: K — Killer",     img:"images/sternritters/bg9.jpg",          icon:"🤖", schrift:"K",  ability:"The Killer — a mechanized body housing multiple combat weapon systems; can launch guided missiles and energy blasts simultaneously",                              quote:"\"Target acquired. Elimination commencing.\"" },
-        { name:"Candice Catnipp",      rank:"Sternritter",                division:"Schrift: T — Thunderbolt",img:"images/sternritters/candice.jpg",      icon:"⚡", schrift:"T",  ability:"The Thunderbolt — generates and fires a massive lightning column; can absorb electricity to power herself and redirect the energy",                              quote:"\"You want to mess with me? Fine — but don't cry when I fry you.\"" },
-        { name:"Cang Du",              rank:"Sternritter",                division:"Schrift: I — Iron",       img:"images/sternritters/cangdu.jpg",       icon:"🛡", schrift:"I",  ability:"The Iron — reinforces his skin to a level that deflects virtually all spiritual attacks; stole Hitsugaya's Bankai during the first invasion",                     quote:"\"Strength is not the blade. Strength is the skin that cannot be cut.\"" },
-        { name:"Giselle Gewelle",      rank:"Sternritter",                division:"Schrift: Z — Zombie",     img:"images/sternritters/giselle.jpg",      icon:"🧟", schrift:"Z",  ability:"The Zombie — can zombify anyone who touches her blood, turning them into perfectly obedient undead warriors including Shinigami",                              quote:"\"Death is just the beginning of loyalty.\"" },
-        { name:"Liltotto Lamperd",     rank:"Sternritter",                division:"Schrift: G — Glutton",    img:"images/sternritters/liltotto.jpg",     icon:"👄", schrift:"G",  ability:"The Glutton — a giant mouth capable of consuming anything, including opponents, their abilities, and spiritual constructs",                                      quote:"\"Everything looks edible when you're hungry enough.\"" },
-        { name:"Mask De Masculine",    rank:"Sternritter",                division:"Schrift: S — Superstar",  img:"images/sternritters/mask.jpg",         icon:"🤼", schrift:"S",  ability:"The Superstar — gains power from cheers and applause; becomes exponentially stronger as an audience cheers him on",                                            quote:"\"Everyone loves a winner — and I never lose!\"" },
-        { name:"NaNaNa Najahkoop",     rank:"Sternritter",                division:"Schrift: U — Underbelly", img:"images/sternritters/nanana.jpg",       icon:"🔱", schrift:"U",  ability:"The Underbelly — creates a pressure map of an opponent's spiritual energy, revealing the precise gaps in their power that can be exploited",                    quote:"\"Every defense has a weakness. I find it in seconds.\"" },
-        { name:"Pernida Parnkgjas",    rank:"Sternritter",                division:"Schrift: C — Compulsory", img:"images/sternritters/pernida.jpg",      icon:"🖐", schrift:"C",  ability:"The Compulsory — nerves extend to control the structure of anything touched; can forcibly evolve and adapt its power to overcome any opponent",                quote:"\"I will bend everything — bone, blade, and will.\"" },
-        { name:"Robert Accutrone",     rank:"Sternritter",                division:"Schrift: R — Rangi Range",img:"images/sternritters/robert.jpg",       icon:"🎯", schrift:"R",  ability:"The Rangi Range — compresses the effective range of attacks; his shots bypass conventional defense through spatial compression",                                quote:"\"Range is irrelevant. I always hit what I aim for.\"" },
-      ]
-    };
-  </script>
 </body>
 </html>
  
