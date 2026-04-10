@@ -16,11 +16,12 @@
   <div class="cursor-orb" id="cursorOrb"></div>
   <div class="cursor-glow" id="cursorGlow"></div>
 
+  <!-- NAVBAR -->
   <nav class="navbar glass" id="navbar">
     <a class="nav-logo" href="index.html">
-      <img src="icons/logo.png" alt="Bleach" class="logo-img" id="navLogo"
-           onerror="this.style.display='none';document.getElementById('navWordmark').style.display='block'"/>
-      <span class="logo-wordmark" id="navWordmark">BLEACH</span>
+      <img src="icons/logo.png" alt="Bleach" class="logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-wordmark" style="display:none">BLEACH</span>
     </a>
     <div class="nav-links">
       <a href="index.html"        class="nav-link">Home</a>
@@ -31,10 +32,10 @@
     <div class="nav-crest">
       <svg viewBox="0 0 40 40" fill="none">
         <circle cx="20" cy="20" r="18" stroke="var(--faction-color)" stroke-width="1.2" opacity=".55"/>
-        <path d="M20 4L21.8 17L20 20L18.2 17Z" fill="var(--faction-color)" opacity=".85"/>
-        <path d="M20 36L21.8 23L20 20L18.2 23Z" fill="var(--faction-color)" opacity=".85"/>
-        <path d="M4 20L17 21.8L20 20L17 18.2Z" fill="var(--faction-color)" opacity=".85"/>
-        <path d="M36 20L23 21.8L20 20L23 18.2Z" fill="var(--faction-color)" opacity=".85"/>
+        <path d="M20 4L21.8 17L20 20L18.2 17Z" fill="var(--faction-color)"/>
+        <path d="M20 36L21.8 23L20 20L18.2 23Z" fill="var(--faction-color)"/>
+        <path d="M4 20L17 21.8L20 20L17 18.2Z" fill="var(--faction-color)"/>
+        <path d="M36 20L23 21.8L20 20L23 18.2Z" fill="var(--faction-color)"/>
         <circle cx="20" cy="20" r="2.5" fill="var(--faction-color)"/>
       </svg>
     </div>
@@ -69,7 +70,7 @@
       <div class="hero-pills reveal" style="--d:.52s">
         <div class="pill"><span class="pill-num">13</span><span class="pill-label">Divisions</span></div>
         <div class="pill"><span class="pill-num">13</span><span class="pill-label">Captains</span></div>
-        <div class="pill"><span class="pill-num">1000+</span><span class="pill-label">Years</span></div>
+        <div class="pill"><span class="pill-num">1000+</span><span class="pill-label">Years Old</span></div>
       </div>
     </div>
     <div class="scroll-hint"><div class="sh-line"></div><span>SCROLL</span></div>
@@ -81,11 +82,11 @@
       <div class="ov-text reveal from-left">
         <span class="f-eyebrow">OVERVIEW</span>
         <h2 class="f-heading">The Court Guard Squads</h2>
-        <p>The Gotei 13 (護廷十三隊, Goteijūsantai) is the primary military force of Soul Society, first formed over a thousand years ago. Originally thirteen brutal warriors led by the bloodthirsty Yama-jii, the organization evolved into a disciplined army structured around 13 numbered divisions, each with a distinct purpose and culture.</p>
-        <p>A Captain's requirement is absolute mastery of Bankai — a feat achieved by fewer than 1 in 1,000 Shinigami. Lieutenants, officers, and seated members fill the ranks below. Together they patrol the flow of souls between the living world and Soul Society, purify Hollows, and defend the balance of the universe.</p>
+        <p>The Gotei 13 (護廷十三隊) is the primary military force of Soul Society, formed over a thousand years ago by thirteen ruthless warriors led by Genryūsai Yamamoto. Evolved into a disciplined army of 13 numbered divisions, each with its own Captain, Lieutenant, and seated officers.</p>
+        <p>A Captain's requirement is absolute — mastery of Bankai, achieved by fewer than 1 in 1,000 Shinigami. Together they patrol the flow of souls between worlds, purify Hollows, and defend the balance of the universe.</p>
         <div class="ov-pillars">
           <div class="pillar"><span class="pillar-icon">⚔</span><span>Combat Prowess</span></div>
-          <div class="pillar"><span class="pillar-icon">🌸</span><span>Zanpakutō Mastery</span></div>
+          <div class="pillar"><span class="pillar-icon">🌸</span><span>Bankai Mastery</span></div>
           <div class="pillar"><span class="pillar-icon">🛡</span><span>Soul Balance</span></div>
         </div>
       </div>
@@ -93,17 +94,17 @@
         <div class="emblem-glow-wrap">
           <svg class="faction-emblem" viewBox="0 0 200 200" fill="none">
             <circle cx="100" cy="100" r="95" stroke="var(--faction-color)" stroke-width="1.5" opacity=".35"/>
-            <circle cx="100" cy="100" r="75" stroke="var(--faction-color)" stroke-width="1" opacity=".2"/>
+            <circle cx="100" cy="100" r="72" stroke="var(--faction-color)" stroke-width="1" opacity=".18"/>
             <path d="M100 12L104 88L100 100L96 88Z" fill="var(--faction-color)" opacity=".9"/>
             <path d="M100 188L104 112L100 100L96 112Z" fill="var(--faction-color)" opacity=".9"/>
             <path d="M12 100L88 104L100 100L88 96Z" fill="var(--faction-color)" opacity=".9"/>
             <path d="M188 100L112 104L100 100L112 96Z" fill="var(--faction-color)" opacity=".9"/>
-            <path d="M32 32L82 88L100 100L88 82Z" fill="var(--faction-color)" opacity=".55"/>
-            <path d="M168 32L112 88L100 100L112 82Z" fill="var(--faction-color)" opacity=".55"/>
-            <path d="M32 168L82 112L100 100L88 112Z" fill="var(--faction-color)" opacity=".55"/>
-            <path d="M168 168L112 112L100 100L112 112Z" fill="var(--faction-color)" opacity=".55"/>
+            <path d="M32 32L82 88L100 100L88 82Z" fill="var(--faction-color)" opacity=".5"/>
+            <path d="M168 32L112 88L100 100L112 82Z" fill="var(--faction-color)" opacity=".5"/>
+            <path d="M32 168L82 112L100 100L88 112Z" fill="var(--faction-color)" opacity=".5"/>
+            <path d="M168 168L112 112L100 100L112 112Z" fill="var(--faction-color)" opacity=".5"/>
             <circle cx="100" cy="100" r="10" fill="var(--faction-color)" opacity=".9"/>
-            <circle cx="100" cy="100" r="6" fill="var(--bg-deep)"/>
+            <circle cx="100" cy="100" r="5" fill="var(--bg-deep)"/>
           </svg>
           <div class="emblem-ring-glow"></div>
         </div>
@@ -113,21 +114,289 @@
     </div>
   </section>
 
-  <!-- CHARACTER ROSTER -->
+  <!-- ══════════════════════════════════════════
+       CHARACTER ROSTER — HARDCODED
+  ══════════════════════════════════════════ -->
   <section class="roster-section" id="roster">
     <div class="roster-header reveal">
       <span class="f-eyebrow">SQUAD ROSTER</span>
       <h2 class="f-heading">All 13 Divisions</h2>
-      <p class="f-sub">Click any card to read more. Add character images to <code>images/gotei/</code>.</p>
     </div>
-    <div class="char-grid" id="charGrid">
-      <!-- Injected by JS -->
-    </div>
+
+    <div class="char-grid">
+
+      <!-- 1. ICHIGO -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/ichigo.jpg" alt="Ichigo Kurosaki" loading="lazy"
+               onerror="window.imgFallback(this,'⚡')"/>
+          <span class="card-badge">Substitute Soul Reaper</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Special Status</span>
+          <h3 class="card-name">Ichigo Kurosaki</h3>
+          <p class="card-rank">Substitute Shinigami · Protagonist</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Tensa Zangetsu</span>
+          <p class="card-ability">Getsuga Tenshō — a compressed wave of spiritual energy fired from his blade. After unlocking his true Zanpakutō, he wields two blades representing his merged Shinigami and Hollow heritage. Capable of Final Getsuga Tenshō, becoming Getsuga itself at the cost of his powers.</p>
+          <blockquote class="card-quote">"If fate is a millstone, then we are the grist. There is nothing we can do."</blockquote>
+        </div>
+      </article>
+
+      <!-- 2. YAMAMOTO -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/yamamoto.jpg" alt="Genryūsai Yamamoto" loading="lazy"
+               onerror="window.imgFallback(this,'🔥')"/>
+          <span class="card-badge">1st Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">1st Division · Captain-Commander</span>
+          <h3 class="card-name">Genryūsai Yamamoto</h3>
+          <p class="card-rank">Captain-Commander of the Gotei 13</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Zanka no Tachi</span>
+          <p class="card-ability">Ryūjin Jakka — the oldest and most powerful fire-type Zanpakutō in existence. In Bankai, his blade concentrates all flames into a single point of absolute heat. Zanka no Tachi has four directional techniques — each capable of annihilating an army.</p>
+          <blockquote class="card-quote">"Those who do not know what war is should not speak of peace."</blockquote>
+        </div>
+      </article>
+
+      <!-- 3. SUI-FENG -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/suifeng.jpg" alt="Suì-Fēng" loading="lazy"
+               onerror="window.imgFallback(this,'🐝')"/>
+          <span class="card-badge">2nd Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">2nd Division · Captain</span>
+          <h3 class="card-name">Suì-Fēng</h3>
+          <p class="card-rank">Captain of the 2nd Division · Commander of Onmitsukidō</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Jakuhō Raikōben</span>
+          <p class="card-ability">Suzumebachi — a two-touch death weapon; hitting the same spot twice leaves a skull crest that kills instantly. Her Bankai fires a giant guided missile she despises using, as it is too large for her preference of covert assassination.</p>
+          <blockquote class="card-quote">"Speed is the ultimate power. Anything that can't keep up deserves to fall."</blockquote>
+        </div>
+      </article>
+
+      <!-- 4. ROSE -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/rose.jpg" alt="Rōjūrō Ōtoribashi" loading="lazy"
+               onerror="window.imgFallback(this,'🎸')"/>
+          <span class="card-badge">3rd Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">3rd Division · Captain</span>
+          <h3 class="card-name">Rōjūrō Ōtoribashi</h3>
+          <p class="card-rank">Captain of the 3rd Division · Rose · Visored</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Kinshara Butōdan</span>
+          <p class="card-ability">Kinshara — a golden whip that forces victims to experience any sensation its melody dictates. In Bankai, he creates a full orchestra of illusion performers who execute attacks through their music, forcing enemies to live out whatever his compositions demand.</p>
+          <blockquote class="card-quote">"Music is not a language. It is the true expression of the soul."</blockquote>
+        </div>
+      </article>
+
+      <!-- 5. UNOHANA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/unohana.jpg" alt="Retsu Unohana" loading="lazy"
+               onerror="window.imgFallback(this,'🌸')"/>
+          <span class="card-badge">4th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">4th Division · Captain</span>
+          <h3 class="card-name">Retsu Unohana</h3>
+          <p class="card-rank">Captain of the 4th Division · First Kenpachi</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Minazuki</span>
+          <p class="card-ability">Minazuki — a giant manta-ray-like creature that heals any wound by enveloping victims in acidic gastric fluid. Her true identity is the original Kenpachi — the most bloodthirsty and feared Shinigami in history, who sealed her power behind a healer's facade for a thousand years.</p>
+          <blockquote class="card-quote">"There is no wound I cannot heal — and no swordsman alive I cannot kill."</blockquote>
+        </div>
+      </article>
+
+      <!-- 6. SHINJI -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/shinji.jpg" alt="Shinji Hirako" loading="lazy"
+               onerror="window.imgFallback(this,'👁')"/>
+          <span class="card-badge">5th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">5th Division · Captain</span>
+          <h3 class="card-name">Shinji Hirako</h3>
+          <p class="card-rank">Captain of the 5th Division · Visored Leader</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Sakanade</span>
+          <p class="card-ability">Sakanade — inverts the senses of everyone in range: up becomes down, left becomes right, front becomes back. Even knowing the inversion exists does not allow you to compensate for it. As a former Visored, he can augment this with a Hollow mask.</p>
+          <blockquote class="card-quote">"You can't fight what you can't see — or what you only think you can see."</blockquote>
+        </div>
+      </article>
+
+      <!-- 7. BYAKUYA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/byakuya.jpg" alt="Byakuya Kuchiki" loading="lazy"
+               onerror="window.imgFallback(this,'🌸')"/>
+          <span class="card-badge">6th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">6th Division · Captain</span>
+          <h3 class="card-name">Byakuya Kuchiki</h3>
+          <p class="card-rank">Captain of the 6th Division · 28th Head of Kuchiki Clan</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Senbonzakura Kageyoshi</span>
+          <p class="card-ability">Senbonzakura — the blade shatters into a thousand tiny blades resembling cherry blossoms. In Bankai, two enormous swords dissolve into millions of razor petals that move faster than the eye can follow. Final form Shukei: Hakuteiken concentrates them all into a single transcendent blade.</p>
+          <blockquote class="card-quote">"Pride is not merely a shield — it is the very sword that guards everything worth protecting."</blockquote>
+        </div>
+      </article>
+
+      <!-- 8. KOMAMURA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/komamura.jpg" alt="Sajin Komamura" loading="lazy"
+               onerror="window.imgFallback(this,'🐺')"/>
+          <span class="card-badge">7th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">7th Division · Captain</span>
+          <h3 class="card-name">Sajin Komamura</h3>
+          <p class="card-rank">Captain of the 7th Division · Wolfman Warrior</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Kokujō Tengen Myō'ō</span>
+          <p class="card-ability">Tenken — summons giant body parts that mirror Komamura's own movements. Bankai manifests a colossal armored warrior that mirrors every attack at enormous scale. His ultimate technique, the Humanization Technique, turns him fully human — gaining infinite healing power at the cost of becoming mortal and surrendering his soul.</p>
+          <blockquote class="card-quote">"I will fight to protect what matters — even if it costs me my immortality."</blockquote>
+        </div>
+      </article>
+
+      <!-- 9. SHUNSUI -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/shunsui.jpg" alt="Shunsui Kyōraku" loading="lazy"
+               onerror="window.imgFallback(this,'🎲')"/>
+          <span class="card-badge">8th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">8th Division · Captain-Commander (later)</span>
+          <h3 class="card-name">Shunsui Kyōraku</h3>
+          <p class="card-rank">Captain of the 8th Division · Second Captain-Commander</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Katen Kyōkotsu: Karamatsu Shinjū</span>
+          <p class="card-ability">Katen Kyōkotsu — twin blades whose games become reality; all within range must obey the rules. In Bankai, he traps the opponent in an intimate space where four sequential games of death play out, each more devastating than the last. The final stage is a death duet — they share all wounds.</p>
+          <blockquote class="card-quote">"In this game, we must see it through to the very end — even if we don't like how it finishes."</blockquote>
+        </div>
+      </article>
+
+      <!-- 10. KENSEI -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/kensei.jpg" alt="Kensei Muguruma" loading="lazy"
+               onerror="window.imgFallback(this,'✊')"/>
+          <span class="card-badge">9th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">9th Division · Captain</span>
+          <h3 class="card-name">Kensei Muguruma</h3>
+          <p class="card-rank">Captain of the 9th Division · Visored</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Tekken Tachikaze</span>
+          <p class="card-ability">Tachikaze — a small combat knife that fires wind blades in Shikai. Bankai wraps his fists in a tornado of cutting wind, enabling devastating close-range combat. As a Visored, he can amplify this further with his Hollow mask, massively boosting his already brutal close-quarters power.</p>
+          <blockquote class="card-quote">"Talk less. Hit more. That's all the strategy I need."</blockquote>
+        </div>
+      </article>
+
+      <!-- 11. HITSUGAYA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/hitsugaya.jpg" alt="Tōshirō Hitsugaya" loading="lazy"
+               onerror="window.imgFallback(this,'❄️')"/>
+          <span class="card-badge">10th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">10th Division · Captain</span>
+          <h3 class="card-name">Tōshirō Hitsugaya</h3>
+          <p class="card-rank">Captain of the 10th Division · Child Prodigy</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Daiguren Hyōrinmaru</span>
+          <p class="card-ability">Hyōrinmaru — the most powerful ice-type Zanpakutō, controlling heaven and earth ice. In Bankai, giant ice dragon wings and armor form on his body. Each wing tip can freeze everything within a 5-mile radius. In his true completed form, he becomes an adult — his full power finally realized.</p>
+          <blockquote class="card-quote">"I don't need to explain myself to anyone. My blade speaks clearly enough."</blockquote>
+        </div>
+      </article>
+
+      <!-- 12. KENPACHI -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/kenpachi.jpg" alt="Kenpachi Zaraki" loading="lazy"
+               onerror="window.imgFallback(this,'⚔')"/>
+          <span class="card-badge">11th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">11th Division · Captain</span>
+          <h3 class="card-name">Kenpachi Zaraki</h3>
+          <p class="card-rank">Captain of the 11th Division · The Strongest Shinigami</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Nozarashi</span>
+          <p class="card-ability">Nozarashi — a massive cleaver that amplifies raw power beyond all limits. He deliberately wore an eyepatch suppressing his spiritual power, and bells in his hair to warn enemies — making every fight fair. In Bankai he transforms into a demonic berserker form that obliterates anything in its path.</p>
+          <blockquote class="card-quote">"The only thing I care about is the fight. Everything else is just noise."</blockquote>
+        </div>
+      </article>
+
+      <!-- 13. MAYURI -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/mayuri.jpg" alt="Mayuri Kurotsuchi" loading="lazy"
+               onerror="window.imgFallback(this,'⚗')"/>
+          <span class="card-badge">12th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">12th Division · Captain</span>
+          <h3 class="card-name">Mayuri Kurotsuchi</h3>
+          <p class="card-rank">Captain of the 12th Division · Head of Research &amp; Development</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Bankai</span>
+          <span class="card-power-sub">Konjiki Ashisogi Jizō</span>
+          <p class="card-ability">Ashisogi Jizō — a grotesque baby-faced caterpillar that breathes paralysis gas keyed to each opponent's specific biology. Mayuri can modify his own body in real-time during combat and has pre-prepared solutions for thousands of abilities. He treats every opponent as an experiment.</p>
+          <blockquote class="card-quote">"Science advances through experimentation — and you are today's most interesting specimen."</blockquote>
+        </div>
+      </article>
+
+      <!-- 14. UKITAKE -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/gotei/ukitake.jpg" alt="Jūshirō Ukitake" loading="lazy"
+               onerror="window.imgFallback(this,'☁️')"/>
+          <span class="card-badge">13th Division</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">13th Division · Captain</span>
+          <h3 class="card-name">Jūshirō Ukitake</h3>
+          <p class="card-rank">Captain of the 13th Division · Oldest Active Captain</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Zanpakutō</span>
+          <span class="card-power-sub">Sōgyo no Kotowari</span>
+          <p class="card-ability">Sōgyo no Kotowari — twin blades that absorb any energy attack and redirect it back multiplied. Since childhood, Ukitake has housed the right hand of the Soul King within his body — the spirit Mimihagi — which he ultimately sacrifices in the final war to protect Soul Society.</p>
+          <blockquote class="card-quote">"A soul that has known suffering is not weakened by it — it is made deeper."</blockquote>
+        </div>
+      </article>
+
+    </div><!-- /char-grid -->
   </section>
 
   <!-- BACK NAV -->
   <div class="back-nav">
-    <a href="index.html" class="back-btn">← Back to Home</a>
+    <a href="index.html"  class="back-btn">← Back to Home</a>
     <a href="espada.html" class="next-btn">The Espada →</a>
   </div>
 
@@ -155,7 +424,9 @@
         <span class="dev-name">Neel Patel</span>
         <div class="social-row">
           <a href="https://github.com/neelpatel112" target="_blank" rel="noreferrer" class="soc-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
     </div>
@@ -167,29 +438,6 @@
 
   <script src="js/shared.js"></script>
   <script src="js/faction.js"></script>
-  <script>
-    // Inline data for Gotei 13
-    window.FACTION_DATA = {
-      name: "gotei",
-      accentVar: "--gotei-blue",
-      characters: [
-        { name:"Ichigo Kurosaki",   rank:"Substitute Soul Reaper",  division:"",             img:"images/gotei/ichigo.jpg",     icon:"⚡", bankai:"Tensa Zangetsu",       ability:"Getsuga Tenshō — moon-fang heaven-piercer; Hollowification; Final Getsuga Tenshō",                             quote:"\"If fate is a millstone, then we are the grist.\"" },
-        { name:"Genryūsai Yamamoto",rank:"Captain-Commander",       division:"1st Division",  img:"images/gotei/yamamoto.jpg",   icon:"🔥", bankai:"Zanka no Tachi",        ability:"Ryūjin Jakka — oldest and most powerful fire-type Zanpakutō; Zanka no Tachi four directional blades",     quote:"\"Those who do not know what war is should not speak of peace.\"" },
-        { name:"Suì-Fēng",          rank:"Captain",                 division:"2nd Division",  img:"images/gotei/suifeng.jpg",    icon:"🐝", bankai:"Jakuhō Raikōben",       ability:"Suzumebachi — two-touch death Shikai; missile-firing Bankai",                                               quote:"\"Speed is the ultimate power.\"" },
-        { name:"Rōjūrō Ōtoribashi", rank:"Captain",                 division:"3rd Division",  img:"images/gotei/rose.jpg",       icon:"🎸", bankai:"Kinshara Butōdan",      ability:"Kinshara — melody-based illusion that forces victims to experience sensation",                               quote:"\"Music is the true expression of the soul.\"" },
-        { name:"Retsu Unohana",     rank:"Captain",                 division:"4th Division",  img:"images/gotei/unohana.jpg",    icon:"🌸", bankai:"Minazuki (true)",        ability:"Minazuki — healing Zanpakutō; true identity the first Kenpachi, master of Kendo",                           quote:"\"There is no wound I cannot heal — and no swordsman I cannot kill.\"" },
-        { name:"Shinji Hirako",     rank:"Captain",                 division:"5th Division",  img:"images/gotei/shinji.jpg",     icon:"👁", bankai:"Sakanade",              ability:"Sakanade — total inversion of all senses; former Visored leader",                                           quote:"\"You can't fight what you can't see — or what you think you can see.\"" },
-        { name:"Byakuya Kuchiki",   rank:"Captain",                 division:"6th Division",  img:"images/gotei/byakuya.jpg",    icon:"🌸", bankai:"Senbonzakura Kageyoshi",ability:"Senbonzakura — thousand cherry petal blades; Shukei: Hakuteiken god-form",                                  quote:"\"Pride is not just a shield — it is the sword that guards everything important.\"" },
-        { name:"Sajin Komamura",    rank:"Captain",                 division:"7th Division",  img:"images/gotei/komamura.jpg",   icon:"🐺", bankai:"Kokujō Tengen Myō'ō",  ability:"Giant warrior Bankai; Humanization Technique — becomes human at the cost of his heart",                   quote:"\"I will fight to protect — even if it costs me my immortality.\"" },
-        { name:"Shunsui Kyōraku",   rank:"Captain-Commander",       division:"8th Division",  img:"images/gotei/shunsui.jpg",    icon:"🎲", bankai:"Katen Kyōkotsu: Karamatsu Shinjū", ability:"Twin-bladed Zanpakutō that makes games real — players must obey the rules or die",          quote:"\"In this game, we must play through to the end.\"" },
-        { name:"Kensei Muguruma",   rank:"Captain",                 division:"9th Division",  img:"images/gotei/kensei.jpg",     icon:"✊", bankai:"Tekken Tachikaze",      ability:"Wind-blade fist weapon Zanpakutō; Visored with hollow mask",                                               quote:"\"Talk less. Hit more.\"" },
-        { name:"Tōshirō Hitsugaya", rank:"Captain",                 division:"10th Division", img:"images/gotei/hitsugaya.jpg",  icon:"❄️", bankai:"Daiguren Hyōrinmaru",   ability:"Heaven and earth ice dragon — most powerful ice-type; Freeze all moisture in a 5-mile radius",           quote:"\"I don't need to explain myself to anyone.\"" },
-        { name:"Kenpachi Zaraki",   rank:"Captain",                 division:"11th Division", img:"images/gotei/kenpachi.jpg",   icon:"⚔", bankai:"Nozarashi",             ability:"Raw power beyond measure; wounds himself to grow stronger; Nozarashi cleaves anything in its path",       quote:"\"The only thing I care about is the fight. The only thing that matters is this blade.\"" },
-        { name:"Mayuri Kurotsuchi", rank:"Captain",                 division:"12th Division", img:"images/gotei/mayuri.jpg",     icon:"⚗", bankai:"Konjiki Ashisogi Jizō", ability:"Paralyzing Zanpakutō; scientist of Soul Society; can modify himself and others in real-time combat",        quote:"\"Science advances by experimentation — you are today's experiment.\"" },
-        { name:"Jūshirō Ukitake",   rank:"Captain",                 division:"13th Division", img:"images/gotei/ukitake.jpg",    icon:"☁️", bankai:"(Sōgyo no Kotowari)",  ability:"Twin blades that absorb and redirect energy attacks; secretly houses the spirit Mimihagi",               quote:"\"A soul that has suffered is not weaker — it is deeper.\"" },
-      ]
-    };
-  </script>
 </body>
 </html>
  
