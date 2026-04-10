@@ -16,11 +16,12 @@
   <div class="cursor-orb" id="cursorOrb"></div>
   <div class="cursor-glow" id="cursorGlow"></div>
 
+  <!-- NAVBAR -->
   <nav class="navbar glass" id="navbar">
     <a class="nav-logo" href="index.html">
-      <img src="icons/logo.png" alt="Bleach" class="logo-img" id="navLogo"
-           onerror="this.style.display='none';document.getElementById('navWordmark').style.display='block'"/>
-      <span class="logo-wordmark" id="navWordmark">BLEACH</span>
+      <img src="icons/logo.png" alt="Bleach" class="logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-wordmark" style="display:none">BLEACH</span>
     </a>
     <div class="nav-links">
       <a href="index.html"        class="nav-link">Home</a>
@@ -60,11 +61,11 @@
       <p class="hero-subtitle-jp reveal" style="--d:.34s">十 刃 · Aizen Sōsuke</p>
       <p class="hero-desc reveal" style="--d:.43s">
         Ten Arrancar. Ten numbered blades of Aizen's army.<br/>
-        Hollows who stripped away their masks — and became something far more dangerous.
+        Hollows who stripped away their masks — and became something far more terrifying.
       </p>
       <div class="hero-pills reveal" style="--d:.52s">
         <div class="pill"><span class="pill-num">10</span><span class="pill-label">Espada</span></div>
-        <div class="pill"><span class="pill-num">1</span><span class="pill-label">Leader: Aizen</span></div>
+        <div class="pill"><span class="pill-num">2</span><span class="pill-label">Resurreccion Stages</span></div>
         <div class="pill"><span class="pill-num">∞</span><span class="pill-label">Reiatsu</span></div>
       </div>
     </div>
@@ -77,8 +78,8 @@
       <div class="ov-text reveal from-left">
         <span class="f-eyebrow">OVERVIEW</span>
         <h2 class="f-heading">Arrancars of Las Noches</h2>
-        <p>The Espada (十刃, Jūssantai; literally "Ten Blades") are the ten most powerful Arrancar in Sōsuke Aizen's army, residing within the vast fortress of Las Noches in Hueco Mundo. Each Espada is numbered 0–9, with the number tattooed somewhere on their body indicating their relative power — though even the weakest can overpower most Shinigami Captains.</p>
-        <p>Arrancar are Hollows who have removed their Hollow mask, gaining a human form and Shinigami-like powers while retaining their Hollow core. In Resurreccion — their released form — they shed their human guise entirely and reveal the full devastation of their original Hollow nature.</p>
+        <p>The Espada (十刃) are the ten most powerful Arrancar in Sōsuke Aizen's army, residing within the fortress of Las Noches in Hueco Mundo. Each is numbered 0–9, tattooed somewhere on their body, indicating their rank of power. Even the weakest can overpower most Shinigami Captains.</p>
+        <p>Arrancar are Hollows who removed their Hollow mask, gaining a human form and Shinigami-like powers. In Resurreccion — their released form — they shed their human guise and reveal the full devastation of their original Hollow nature.</p>
         <div class="ov-pillars">
           <div class="pillar"><span class="pillar-icon">💀</span><span>Resurreccion</span></div>
           <div class="pillar"><span class="pillar-icon">🌑</span><span>Cero Blasts</span></div>
@@ -92,8 +93,8 @@
             <path d="M100 8L192 170L100 132L8 170Z" fill="var(--faction-color)" opacity=".04"/>
             <path d="M100 40L166 156L100 122L34 156Z" stroke="var(--faction-color)" stroke-width="1" opacity=".2"/>
             <circle cx="100" cy="90" r="18" stroke="var(--faction-color)" stroke-width="1.5" opacity=".5"/>
-            <circle cx="100" cy="90" r="9"  fill="var(--faction-color)" opacity=".85"/>
-            <circle cx="100" cy="90" r="4"  fill="var(--bg-deep)"/>
+            <circle cx="100" cy="90" r="9" fill="var(--faction-color)" opacity=".85"/>
+            <circle cx="100" cy="90" r="4" fill="var(--bg-deep)"/>
           </svg>
           <div class="emblem-ring-glow"></div>
         </div>
@@ -103,14 +104,208 @@
     </div>
   </section>
 
-  <!-- CHARACTER ROSTER -->
+  <!-- ══════════════════════════════════════════
+       ESPADA ROSTER — HARDCODED
+  ══════════════════════════════════════════ -->
   <section class="roster-section" id="roster">
     <div class="roster-header reveal">
       <span class="f-eyebrow">ESPADA ROSTER</span>
       <h2 class="f-heading">The Ten Blades</h2>
-      <p class="f-sub">Ranked from 1 to 10. Each number is power incarnate. Add images to <code>images/espada/</code>.</p>
     </div>
-    <div class="char-grid" id="charGrid"></div>
+
+    <div class="char-grid">
+
+      <!-- AIZEN -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/aizen.jpg" alt="Sōsuke Aizen" loading="lazy"
+               onerror="window.imgFallback(this,'✦')"/>
+          <span class="card-badge">Overlord</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Leader of Hueco Mundo</span>
+          <h3 class="card-name">Sōsuke Aizen</h3>
+          <p class="card-rank">Former 5th Division Captain · Orchestrator of All</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Transcendence (Hogyoku)</span>
+          <p class="card-ability">Kyōka Suigetsu — complete hypnosis affecting all five senses of everyone who has seen its release. After merging with the Hōgyoku, Aizen transcended both Shinigami and Hollow, becoming a being that surpassed all categories — until Ichigo's power exceeded even that.</p>
+          <blockquote class="card-quote">"From the start, no one in this world has been able to stand in the heavens and look down on me."</blockquote>
+        </div>
+      </article>
+
+      <!-- STARK -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/stark.jpg" alt="Coyote Stark" loading="lazy"
+               onerror="window.imgFallback(this,'🐺')"/>
+          <span class="card-badge">Espada #1</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Primera Espada</span>
+          <h3 class="card-name">Coyote Stark</h3>
+          <p class="card-rank">Primera Espada · Aspect of Death: Loneliness</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Los Lobos</span>
+          <p class="card-ability">Cero Metralleta — fires an infinite volley of Cero blasts simultaneously from the wolves that Stark split from his own soul. His power was so immense that every Hollow near him died from proximity — forcing him to split his soul into Stark and Lilynette just to survive.</p>
+          <blockquote class="card-quote">"I don't want to fight. I just don't want to be alone anymore."</blockquote>
+        </div>
+      </article>
+
+      <!-- BARAGGAN -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/baraggan.jpg" alt="Baraggan Louisenbairn" loading="lazy"
+               onerror="window.imgFallback(this,'💀')"/>
+          <span class="card-badge">Espada #2</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Segunda Espada</span>
+          <h3 class="card-name">Baraggan Louisenbairn</h3>
+          <p class="card-rank">Segunda Espada · Former God-King of Hueco Mundo</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Arrogante</span>
+          <p class="card-ability">Respira — the Breath of Death. A miasma that ages everything it touches to dust in seconds — flesh, bone, weapons, and Bankai alike. His aspect of death is aging itself. Even his own body deteriorates without his armor, revealing a skeletal form beneath.</p>
+          <blockquote class="card-quote">"I am death itself. There is nothing in existence that does not age and crumble before me."</blockquote>
+        </div>
+      </article>
+
+      <!-- HARRIBEL -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/harribel.jpg" alt="Tier Harribel" loading="lazy"
+               onerror="window.imgFallback(this,'🦈')"/>
+          <span class="card-badge">Espada #3</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Tercera Espada</span>
+          <h3 class="card-name">Tier Harribel</h3>
+          <p class="card-rank">Tercera Espada · Ruler of Hueco Mundo (post-war)</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Tiburón</span>
+          <p class="card-ability">Water and blood manipulation on a massive scale. In Resurreccion, she manifests a shark-themed form that turns all moisture in the environment into weapons. Her Hirviendo boils any water-based attack and redirects it. She ultimately becomes ruler of Hueco Mundo after Aizen's defeat.</p>
+          <blockquote class="card-quote">"If it is for those I protect, I will fight any enemy — and I will not fall."</blockquote>
+        </div>
+      </article>
+
+      <!-- ULQUIORRA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/ulquiorra.jpg" alt="Ulquiorra Cifer" loading="lazy"
+               onerror="window.imgFallback(this,'🦇')"/>
+          <span class="card-badge">Espada #4</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Cuarta Espada</span>
+          <h3 class="card-name">Ulquiorra Cifer</h3>
+          <p class="card-rank">Cuarta Espada · Aspect of Death: Nihilism</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Murciélago — Segunda Etapa</span>
+          <p class="card-ability">The only Espada to achieve a true second Resurreccion — Segunda Etapa. In this form he surpasses all other Espada and claims power that can only exist at the top of Hueco Mundo. His Lanza del Relámpago destroys everything in its blast radius. His final moment is a search for what a heart actually is.</p>
+          <blockquote class="card-quote">"That is what I call a heart. If you have one, it would be right here — in the place where mine should be."</blockquote>
+        </div>
+      </article>
+
+      <!-- NNOITRA -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/nnoitra.jpg" alt="Nnoitra Gilga" loading="lazy"
+               onerror="window.imgFallback(this,'🌙')"/>
+          <span class="card-badge">Espada #5</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Quinta Espada</span>
+          <h3 class="card-name">Nnoitra Gilga</h3>
+          <p class="card-rank">Quinta Espada · Aspect of Death: Despair</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Santa Teresa</span>
+          <p class="card-ability">Transforms into a six-armed form carrying six enormous scythes simultaneously. His Hierro — the hardened skin of an Arrancar — is the hardest of any Espada, near impenetrable. His singular obsession is finding a battle where he can finally die, having grown bored of survival.</p>
+          <blockquote class="card-quote">"I won't stop — not until I find a battle where someone can actually kill me."</blockquote>
+        </div>
+      </article>
+
+      <!-- GRIMMJOW -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/grimmjow.jpg" alt="Grimmjow Jaegerjaquez" loading="lazy"
+               onerror="window.imgFallback(this,'🐆')"/>
+          <span class="card-badge">Espada #6</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Sexta Espada</span>
+          <h3 class="card-name">Grimmjow Jaegerjaquez</h3>
+          <p class="card-rank">Sexta Espada · Aspect of Death: Destruction</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Pantera</span>
+          <p class="card-ability">Lightning-fast Sonído and savage close-range combat. In Resurreccion he transforms into a panther-like form with claws that fire Desgarrón — ten enormous claw beams. Untameable by even Aizen, his obsession with defeating Ichigo in a fair fight is his only consistent motivation.</p>
+          <blockquote class="card-quote">"I am the king. And I will keep clawing my way back up — no matter how many times you knock me down."</blockquote>
+        </div>
+      </article>
+
+      <!-- ZOMMARI -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/zommari.jpg" alt="Zommari Rureaux" loading="lazy"
+               onerror="window.imgFallback(this,'👁')"/>
+          <span class="card-badge">Espada #7</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Séptima Espada</span>
+          <h3 class="card-name">Zommari Rureaux</h3>
+          <p class="card-rank">Séptima Espada · Fastest Sonído User</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Brujería</span>
+          <p class="card-ability">50 eyes of Amor bloom across his body in Resurreccion — each capable of taking over the soul of whatever limb or body part it makes contact with. Victims cannot control their own bodies. Claims to have the fastest Sonído of any Espada and an intense devotion to Aizen bordering on religious.</p>
+          <blockquote class="card-quote">"You Shinigami think yourselves superior — yet you have never truly understood the meaning of speed."</blockquote>
+        </div>
+      </article>
+
+      <!-- SZAYELAPORRO -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/szayelaporro.jpg" alt="Szayelaporro Granz" loading="lazy"
+               onerror="window.imgFallback(this,'🧬')"/>
+          <span class="card-badge">Espada #8</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Octava Espada</span>
+          <h3 class="card-name">Szayelaporro Granz</h3>
+          <p class="card-rank">Octava Espada · Scientist of Hueco Mundo</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Fornicarás</span>
+          <p class="card-ability">Creates dolls from captured opponents, allowing him to destroy organs inside living enemies by breaking the doll. Can also self-replicate by consuming a host body from the inside — reincarnating himself through others. He believes he has prepared for every possible scenario. He was wrong.</p>
+          <blockquote class="card-quote">"I have prepared for every possibility. There is no scenario in existence in which I can lose."</blockquote>
+        </div>
+      </article>
+
+      <!-- AARONIERO -->
+      <article class="char-card">
+        <div class="card-img">
+          <img src="images/espada/aaroniero.jpg" alt="Aaroniero Arruruerie" loading="lazy"
+               onerror="window.imgFallback(this,'🌑')"/>
+          <span class="card-badge">Espada #9</span>
+        </div>
+        <div class="card-body">
+          <span class="card-division">Novena Espada</span>
+          <h3 class="card-name">Aaroniero Arruruerie</h3>
+          <p class="card-rank">Novena Espada · The Only Gillian-Class Espada</p>
+          <div class="card-divider"></div>
+          <span class="card-power-label">Resurreccion</span>
+          <span class="card-power-sub">Glotonería</span>
+          <p class="card-ability">Has absorbed 33,650 Hollows and all their powers — the only Vasto Lorde or Gillian-class Arrancar among the Espada. His two heads contain the souls of every Hollow consumed. By absorbing Metastacia, he also contained the memories and powers of the deceased Soul Reaper Kaien Shiba, using them to torment Rukia.</p>
+          <blockquote class="card-quote">"I am every Hollow that has ever existed. I am without limit. I am endless."</blockquote>
+        </div>
+      </article>
+
+    </div><!-- /char-grid -->
   </section>
 
   <div class="back-nav">
@@ -118,26 +313,33 @@
     <a href="sternritters.html" class="next-btn">Sternritters →</a>
   </div>
 
+  <!-- FOOTER -->
   <footer class="site-footer glass">
     <div class="footer-grid">
       <div class="f-brand">
         <img src="icons/logo.png" alt="Bleach" class="f-logo" onerror="this.style.display='none'"/>
-        <span class="f-name">BLEACH</span><span class="f-tagline">Soul Society Archives</span>
+        <span class="f-name">BLEACH</span>
+        <span class="f-tagline">Soul Society Archives</span>
       </div>
       <div class="f-col">
         <span class="f-col-title">Factions</span>
-        <a href="gotei.html">Gotei 13</a><a href="espada.html">The Espada</a><a href="sternritters.html">Sternritters</a>
+        <a href="gotei.html">Gotei 13</a>
+        <a href="espada.html">The Espada</a>
+        <a href="sternritters.html">Sternritters</a>
       </div>
       <div class="f-col">
         <span class="f-col-title">Navigate</span>
-        <a href="index.html">Home</a><a href="#roster">Roster</a>
+        <a href="index.html">Home</a>
+        <a href="#roster">Roster</a>
       </div>
       <div class="f-dev">
         <span class="f-col-title">Developer</span>
         <span class="dev-name">Neel Patel</span>
         <div class="social-row">
           <a href="https://github.com/neelpatel112" target="_blank" rel="noreferrer" class="soc-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
     </div>
@@ -149,24 +351,6 @@
 
   <script src="js/shared.js"></script>
   <script src="js/faction.js"></script>
-  <script>
-    window.FACTION_DATA = {
-      name: "espada",
-      accentVar: "--espada-red",
-      characters: [
-        { name:"Sōsuke Aizen",         rank:"Overlord of Hueco Mundo",  division:"Espada Leader",  img:"images/espada/aizen.jpg",         icon:"✦", resurreccion:"Transcendence (Hogyoku)",         ability:"Kyōka Suigetsu — complete hypnosis affecting all five senses simultaneously; Hogyoku god-form that transcends Shinigami and Hollow",                             quote:"\"From the start, no one in this world has been able to stand in the heavens and look down upon me.\"" },
-        { name:"Coyote Stark",         rank:"Primera Espada",           division:"Espada #1",      img:"images/espada/stark.jpg",         icon:"🐺", resurreccion:"Los Lobos",               ability:"Cero Metralleta — an infinite volley of Cero blasts; splits his very soul into hundreds of wolves that fire Cero at will",                                       quote:"\"I don't want to fight. I just don't want to be alone.\"" },
-        { name:"Baraggan Louisenbairn",rank:"Segunda Espada",           division:"Espada #2",      img:"images/espada/baraggan.jpg",      icon:"💀", resurreccion:"Arrogante",               ability:"Respira — the Breath of Death that ages everything it touches to dust in seconds; former God-King of Hueco Mundo",                                              quote:"\"I am death itself. There is nothing that does not age before me.\"" },
-        { name:"Tier Harribel",        rank:"Tercera Espada",           division:"Espada #3",      img:"images/espada/harribel.jpg",      icon:"🦈", resurreccion:"Tiburón",                 ability:"Water and blood manipulation at a massive scale; Shark-themed Resurreccion turns all moisture into a weapon",                                                    quote:"\"If it is for those I protect, I will fight any enemy.\"" },
-        { name:"Ulquiorra Cifer",      rank:"Cuarta Espada",            division:"Espada #4",      img:"images/espada/ulquiorra.jpg",    icon:"🦇", resurrescion:"Murciélago (x2)",         ability:"The only Espada to achieve a Segunda Etapa — a true second Resurreccion. Lanza del Relámpago — a lance that destroys everything in its blast radius",           quote:"\"That is what I call a heart. If you have one, it would be here — in the place where mine should be.\"" },
-        { name:"Nnoitra Gilga",        rank:"Quinta Espada",            division:"Espada #5",      img:"images/espada/nnoitra.jpg",      icon:"🌙", resurreccion:"Santa Teresa",            ability:"Six-armed transformation carrying six giant scythes; hardest Hierro of any Espada — near impenetrable skin",                                                    quote:"\"I won't stop until I find a battle where I can die.\"" },
-        { name:"Grimmjow Jaegerjaquez",rank:"Sexta Espada",             division:"Espada #6",      img:"images/espada/grimmjow.jpg",    icon:"🐆", resurreccion:"Pantera",                 ability:"Lightning-fast Sonído and savage combat; Desgarrón — ten claw beams of destruction; aggressive and untameable even by Aizen",                                  quote:"\"I am the king. And I will keep clawing my way up — forever.\"" },
-        { name:"Zommari Rureaux",      rank:"Séptima Espada",           division:"Espada #7",      img:"images/espada/zommari.jpg",      icon:"👁", resurreccion:"Brujería",                ability:"50 eyes of Amor — soul possession control over any limb or body the eyes contact; fastest Sonído user among the Espada",                                        quote:"\"You Shinigami think yourselves superior — yet you have never known true speed.\"" },
-        { name:"Szayelaporro Granz",   rank:"Octava Espada",            division:"Espada #8",      img:"images/espada/szayelaporro.jpg",icon:"🧬", resurreccion:"Fornicarás",              ability:"Creates dolls from enemies to control or destroy them; can reincarnate himself through a host — consuming them from within",                                      quote:"\"I have prepared for every possibility. There is no scenario in which I lose.\"" },
-        { name:"Aaroniero Arruruerie", rank:"Novena Espada",            division:"Espada #9",      img:"images/espada/aaroniero.jpg",    icon:"🌑", resurreccion:"Glotonería",              ability:"Absorption of any Hollow and all their powers — the only Vasto Lorde-class Espada; 33,650 absorbed Hollows in his Resurreccion form",                          quote:"\"I am every Hollow. I am endless.\"" },
-      ]
-    };
-  </script>
 </body>
 </html>
  
