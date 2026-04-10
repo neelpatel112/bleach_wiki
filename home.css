@@ -1,0 +1,276 @@
+/* ══════════════════════════════════════════════════════════════
+   home.css — Homepage specific styles
+   Author: Neel Patel
+══════════════════════════════════════════════════════════════ */
+
+/* ── HERO CTA ─────────────────────────────────────────────── */
+.hero-cta { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.cta-btn {
+  font-family:'Cinzel',serif; font-size:.78rem; letter-spacing:.16em;
+  text-transform:uppercase; padding:14px 38px; border-radius:100px;
+  transition: all .4s cubic-bezier(.25,.8,.25,1);
+}
+.cta-btn.primary {
+  background: linear-gradient(135deg,#7a5e20,#c9a84c);
+  color:#08060a; border:1px solid var(--gold);
+  box-shadow: 0 0 28px rgba(201,168,76,.3);
+}
+.cta-btn.primary:hover { box-shadow:0 0 52px rgba(201,168,76,.6); transform:translateY(-3px); }
+.cta-btn.ghost {
+  background:var(--glass-bg); color:var(--text-sec);
+  border:1px solid var(--glass-border); backdrop-filter:blur(10px);
+}
+.cta-btn.ghost:hover { color:var(--text-primary); border-color:var(--gold); transform:translateY(-3px); }
+
+/* ── SECTION SHARED TYPOGRAPHY ────────────────────────────── */
+.s-eyebrow {
+  display:block; font-family:'Cinzel',serif; font-size:.66rem;
+  letter-spacing:.32em; text-transform:uppercase; color:var(--gold);
+  margin-bottom:12px; opacity:.85;
+}
+.s-title {
+  font-family:'Cinzel Decorative',serif; font-size:clamp(1.8rem,3.5vw,2.8rem);
+  font-weight:900; line-height:1.15; color:var(--text-primary);
+}
+.s-sub { font-size:.95rem; color:var(--text-sec); margin-top:10px; line-height:1.7; }
+
+/* ── STORY SECTION ────────────────────────────────────────── */
+.story-section {
+  padding:120px 60px;
+  position:relative;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(201,168,76,.03) 0%,transparent 70%);
+}
+.story-section::before {
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:1px; background:linear-gradient(to right,transparent,rgba(201,168,76,.2),transparent);
+}
+.story-header { max-width:1200px; margin:0 auto 64px; }
+
+.story-blocks { max-width:1200px; margin:0 auto; display:flex; flex-direction:column; gap:0; }
+
+.story-block {
+  display:grid; grid-template-columns:80px 1fr;
+  gap:0 40px; padding:52px 0;
+  border-bottom:1px solid var(--glass-border);
+  position:relative;
+}
+.story-block:last-child { border-bottom:none; }
+.story-block::before {
+  content:''; position:absolute;
+  left:80px; top:0; bottom:0; width:1px;
+  background:linear-gradient(to bottom,transparent,var(--glass-border),transparent);
+}
+
+.arc-num {
+  font-family:'Cinzel Decorative',serif;
+  font-size:3.5rem; font-weight:900; line-height:1;
+  color:var(--gold); opacity:.18;
+  align-self:start; padding-top:4px;
+}
+
+.arc-content { padding-left:40px; }
+.arc-tag {
+  display:inline-block; font-family:'Cinzel',serif;
+  font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
+  padding:4px 14px; border-radius:100px; margin-bottom:14px;
+  border:1px solid;
+}
+.gotei-tag { color:var(--gotei-blue); border-color:rgba(74,144,226,.4); background:rgba(74,144,226,.08); }
+.espada-tag { color:var(--espada-light); border-color:rgba(192,57,43,.4); background:rgba(192,57,43,.08); }
+.stern-tag { color:var(--stern-silver); border-color:rgba(232,232,245,.3); background:rgba(232,232,245,.05); }
+
+.arc-content h3 {
+  font-family:'Cinzel',serif; font-size:clamp(1.1rem,2vw,1.5rem);
+  font-weight:700; color:var(--text-primary); margin-bottom:14px; letter-spacing:.04em;
+}
+.arc-content p { font-size:.92rem; line-height:1.9; color:var(--text-sec); margin-bottom:12px; }
+.arc-hl {
+  font-size:.82rem; color:var(--gold); opacity:.75;
+  border-left:2px solid var(--gold); padding-left:14px; margin-top:16px;
+  font-style:italic;
+}
+
+/* ── FACTION CARDS ────────────────────────────────────────── */
+.factions-section {
+  padding:120px 60px;
+  position:relative;
+}
+.factions-section::before {
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:1px; background:linear-gradient(to right,transparent,var(--glass-border),transparent);
+}
+.factions-header { max-width:1200px; margin:0 auto 56px; }
+
+.faction-cards {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+}
+
+.faction-card {
+  position:relative; border-radius:var(--r-xl); overflow:hidden;
+  min-height:560px; display:flex; align-items:flex-end;
+  border:1px solid var(--glass-border);
+  transition:transform .5s cubic-bezier(.25,.8,.25,1),
+             border-color .5s, box-shadow .5s;
+  text-decoration:none;
+}
+.faction-card:hover { transform:translateY(-8px) scale(1.015); }
+.gotei-card:hover  { border-color:rgba(74,144,226,.45); box-shadow:0 24px 80px rgba(74,144,226,.25); }
+.espada-card:hover { border-color:rgba(192,57,43,.45);  box-shadow:0 24px 80px rgba(192,57,43,.25); }
+.stern-card:hover  { border-color:rgba(232,232,245,.25);box-shadow:0 24px 80px rgba(232,232,245,.15); }
+
+.fc-bg-video {
+  position:absolute; inset:0; z-index:0;
+  video { width:100%; height:100%; object-fit:cover; filter:brightness(.35) saturate(.6);
+    transition:filter .5s, transform .6s; }
+}
+.faction-card:hover .fc-bg-video video { filter:brightness(.45) saturate(.8); transform:scale(1.04); }
+
+.fc-veil {
+  position:absolute; inset:0;
+  background:linear-gradient(to top,rgba(4,4,13,.97) 0%,rgba(4,4,13,.6) 45%,transparent 100%);
+}
+.gotei-veil::after {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(74,144,226,.12) 0%,transparent 70%);
+}
+.espada-veil::after {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(192,57,43,.12) 0%,transparent 70%);
+}
+.stern-veil::after {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(160,168,192,.08) 0%,transparent 70%);
+}
+
+.fc-body {
+  position:relative; z-index:1; padding:36px 32px;
+  display:flex; flex-direction:column; gap:0; width:100%;
+}
+.fc-sym { width:52px; height:52px; margin-bottom:20px;
+  svg { width:100%; height:100%; filter:drop-shadow(0 0 8px currentColor); }
+}
+.fc-origin {
+  font-family:'Cinzel',serif; font-size:.62rem; letter-spacing:.24em;
+  text-transform:uppercase; margin-bottom:8px; font-weight:600;
+}
+.gotei-origin { color:var(--gotei-blue); }
+.espada-origin { color:var(--espada-light); }
+.stern-origin { color:var(--stern-silver); }
+
+.fc-name {
+  font-family:'Cinzel Decorative',serif; font-size:clamp(1.4rem,2.5vw,2rem);
+  font-weight:900; color:var(--text-primary); line-height:1; margin-bottom:4px;
+}
+.fc-kanji {
+  font-family:'Noto Serif JP',serif; font-size:.82rem; color:var(--gold);
+  opacity:.5; letter-spacing:.25em; margin-bottom:16px;
+}
+.fc-desc { font-size:.84rem; line-height:1.75; color:var(--text-sec); margin-bottom:22px; }
+.fc-meta {
+  display:flex; align-items:baseline; gap:8px;
+  font-size:.78rem; color:var(--text-muted); margin-bottom:20px;
+  .fc-cnt { font-family:'Cinzel Decorative',serif; font-size:1.4rem; color:var(--gold); }
+}
+.fc-arrow {
+  font-family:'Cinzel',serif; font-size:.78rem; letter-spacing:.15em;
+  color:var(--gold); opacity:.7; transition:.4s;
+  display:inline-block;
+}
+.faction-card:hover .fc-arrow { opacity:1; transform:translateX(6px); }
+
+/* ── PROTAGONIST SECTION ──────────────────────────────────── */
+.protagonist-section {
+  padding:120px 60px;
+  position:relative;
+  background:linear-gradient(to right, rgba(4,4,13,1) 0%, rgba(14,14,36,.6) 50%, rgba(4,4,13,1) 100%);
+}
+.protagonist-section::before {
+  content:''; position:absolute; top:0;left:0;right:0;
+  height:1px; background:linear-gradient(to right,transparent,rgba(201,168,76,.2),transparent);
+}
+.proto-inner {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:420px 1fr; gap:80px; align-items:center;
+}
+.proto-frame {
+  border-radius:var(--r-xl); overflow:hidden;
+  aspect-ratio:3/4; position:relative;
+}
+.proto-frame img { width:100%; height:100%; object-fit:cover; object-position:top; }
+.proto-fallback {
+  width:100%; height:100%; min-height:400px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  background:linear-gradient(135deg,var(--bg-surface),var(--bg-card));
+  span { font-size:4rem; }
+  p { font-family:'Cinzel',serif; color:var(--text-muted); letter-spacing:.1em; }
+}
+.proto-jp {
+  font-family:'Noto Serif JP',serif; font-size:1rem; color:var(--gold);
+  opacity:.55; letter-spacing:.35em; margin:4px 0 24px;
+}
+.proto-text p { font-size:.92rem; line-height:1.9; color:var(--text-sec); margin-bottom:14px; }
+.proto-stats {
+  margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:0;
+  border:1px solid var(--glass-border); border-radius:var(--r-md); overflow:hidden;
+}
+.ps-item {
+  padding:14px 20px; display:flex; flex-direction:column; gap:4px;
+  border-right:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border);
+  &:nth-child(2n) { border-right:none; }
+  &:nth-last-child(-n+2) { border-bottom:none; }
+}
+.ps-label { font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--text-muted); }
+.ps-val { font-family:'Cinzel',serif; font-size:.88rem; color:var(--text-primary); letter-spacing:.04em; }
+
+/* ── QUOTE STRIP ──────────────────────────────────────────── */
+.quote-strip {
+  padding:110px 60px;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden;
+}
+.quote-strip::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(201,168,76,.04) 0%,transparent 70%);
+}
+.qs-inner { text-align:center; max-width:820px; position:relative; }
+.qs-mark {
+  font-family:'Noto Serif JP',serif; font-size:8rem; line-height:.55;
+  color:var(--gold); opacity:.12; margin-bottom:20px; display:block;
+}
+#quoteText {
+  font-family:'Cinzel',serif; font-size:clamp(1rem,2.2vw,1.5rem);
+  font-style:italic; letter-spacing:.04em; line-height:1.75;
+  color:var(--text-primary); margin-bottom:20px;
+  transition:opacity .5s;
+}
+#quoteAuthor {
+  font-size:.78rem; letter-spacing:.22em; color:var(--gold);
+  opacity:.7; text-transform:uppercase; display:block;
+  margin-bottom:28px; transition:opacity .5s;
+}
+.qs-dots { display:flex; justify-content:center; gap:8px; }
+.qs-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--glass-border); cursor:pointer;
+  transition:.4s; border:1px solid var(--glass-border);
+  &.active { background:var(--gold); border-color:var(--gold); }
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media(max-width:1100px) {
+  .faction-cards { grid-template-columns:1fr; max-width:560px; }
+  .faction-card { min-height:400px; }
+  .proto-inner { grid-template-columns:1fr; gap:40px; }
+  .proto-frame { max-width:360px; aspect-ratio:3/4; }
+}
+@media(max-width:768px) {
+  .story-section,.factions-section,.protagonist-section,.quote-strip { padding:80px 24px; }
+  .story-block { grid-template-columns:1fr; gap:12px; }
+  .story-block::before { display:none; }
+  .arc-num { font-size:2.2rem; }
+  .arc-content { padding-left:0; }
+  .proto-stats { grid-template-columns:1fr; }
+  .ps-item { border-right:none !important; }
+}
+ 
