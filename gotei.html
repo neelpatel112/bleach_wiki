@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Gotei 13 — BLEACH Soul Society Archives</title>
+  <link rel="stylesheet" href="css/shared.css"/>
+  <link rel="stylesheet" href="css/faction.css"/>
+  <link rel="stylesheet" href="css/gotei.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="theme-gotei">
+
+  <div class="cursor-orb" id="cursorOrb"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <nav class="navbar glass" id="navbar">
+    <a class="nav-logo" href="index.html">
+      <img src="icons/logo.png" alt="Bleach" class="logo-img" id="navLogo"
+           onerror="this.style.display='none';document.getElementById('navWordmark').style.display='block'"/>
+      <span class="logo-wordmark" id="navWordmark">BLEACH</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html"        class="nav-link">Home</a>
+      <a href="gotei.html"        class="nav-link active">Gotei 13</a>
+      <a href="espada.html"       class="nav-link">The Espada</a>
+      <a href="sternritters.html" class="nav-link">Sternritters</a>
+    </div>
+    <div class="nav-crest">
+      <svg viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="18" stroke="var(--faction-color)" stroke-width="1.2" opacity=".55"/>
+        <path d="M20 4L21.8 17L20 20L18.2 17Z" fill="var(--faction-color)" opacity=".85"/>
+        <path d="M20 36L21.8 23L20 20L18.2 23Z" fill="var(--faction-color)" opacity=".85"/>
+        <path d="M4 20L17 21.8L20 20L17 18.2Z" fill="var(--faction-color)" opacity=".85"/>
+        <path d="M36 20L23 21.8L20 20L23 18.2Z" fill="var(--faction-color)" opacity=".85"/>
+        <circle cx="20" cy="20" r="2.5" fill="var(--faction-color)"/>
+      </svg>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="gotei.html">Gotei 13</a>
+    <a href="espada.html">The Espada</a>
+    <a href="sternritters.html">Sternritters</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="video-wrap">
+      <video autoplay muted loop playsinline>
+        <source src="Gotei.mp4" type="video/mp4"/>
+      </video>
+      <div class="veil"></div>
+    </div>
+    <canvas class="particles" id="heroParticles"></canvas>
+    <div class="hero-body">
+      <div class="hero-eyebrow reveal" style="--d:.1s">
+        <span class="line"></span><span>Soul Society · 護廷十三隊</span><span class="line"></span>
+      </div>
+      <h1 class="hero-title reveal" style="--d:.25s">Gotei 13</h1>
+      <p class="hero-subtitle-jp reveal" style="--d:.34s">護 廷 十 三 隊</p>
+      <p class="hero-desc reveal" style="--d:.43s">
+        Thirteen divisions. Thirteen Captains bearing terrifying Bankai power.<br/>
+        The immortal guardians standing between the living world and oblivion.
+      </p>
+      <div class="hero-pills reveal" style="--d:.52s">
+        <div class="pill"><span class="pill-num">13</span><span class="pill-label">Divisions</span></div>
+        <div class="pill"><span class="pill-num">13</span><span class="pill-label">Captains</span></div>
+        <div class="pill"><span class="pill-num">1000+</span><span class="pill-label">Years</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint"><div class="sh-line"></div><span>SCROLL</span></div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="faction-overview">
+    <div class="overview-inner">
+      <div class="ov-text reveal from-left">
+        <span class="f-eyebrow">OVERVIEW</span>
+        <h2 class="f-heading">The Court Guard Squads</h2>
+        <p>The Gotei 13 (護廷十三隊, Goteijūsantai) is the primary military force of Soul Society, first formed over a thousand years ago. Originally thirteen brutal warriors led by the bloodthirsty Yama-jii, the organization evolved into a disciplined army structured around 13 numbered divisions, each with a distinct purpose and culture.</p>
+        <p>A Captain's requirement is absolute mastery of Bankai — a feat achieved by fewer than 1 in 1,000 Shinigami. Lieutenants, officers, and seated members fill the ranks below. Together they patrol the flow of souls between the living world and Soul Society, purify Hollows, and defend the balance of the universe.</p>
+        <div class="ov-pillars">
+          <div class="pillar"><span class="pillar-icon">⚔</span><span>Combat Prowess</span></div>
+          <div class="pillar"><span class="pillar-icon">🌸</span><span>Zanpakutō Mastery</span></div>
+          <div class="pillar"><span class="pillar-icon">🛡</span><span>Soul Balance</span></div>
+        </div>
+      </div>
+      <div class="ov-emblem reveal from-right">
+        <div class="emblem-glow-wrap">
+          <svg class="faction-emblem" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="95" stroke="var(--faction-color)" stroke-width="1.5" opacity=".35"/>
+            <circle cx="100" cy="100" r="75" stroke="var(--faction-color)" stroke-width="1" opacity=".2"/>
+            <path d="M100 12L104 88L100 100L96 88Z" fill="var(--faction-color)" opacity=".9"/>
+            <path d="M100 188L104 112L100 100L96 112Z" fill="var(--faction-color)" opacity=".9"/>
+            <path d="M12 100L88 104L100 100L88 96Z" fill="var(--faction-color)" opacity=".9"/>
+            <path d="M188 100L112 104L100 100L112 96Z" fill="var(--faction-color)" opacity=".9"/>
+            <path d="M32 32L82 88L100 100L88 82Z" fill="var(--faction-color)" opacity=".55"/>
+            <path d="M168 32L112 88L100 100L112 82Z" fill="var(--faction-color)" opacity=".55"/>
+            <path d="M32 168L82 112L100 100L88 112Z" fill="var(--faction-color)" opacity=".55"/>
+            <path d="M168 168L112 112L100 100L112 112Z" fill="var(--faction-color)" opacity=".55"/>
+            <circle cx="100" cy="100" r="10" fill="var(--faction-color)" opacity=".9"/>
+            <circle cx="100" cy="100" r="6" fill="var(--bg-deep)"/>
+          </svg>
+          <div class="emblem-ring-glow"></div>
+        </div>
+        <p class="emblem-label">護廷十三隊</p>
+        <p class="emblem-sub">Goteijūsantai</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTER ROSTER -->
+  <section class="roster-section" id="roster">
+    <div class="roster-header reveal">
+      <span class="f-eyebrow">SQUAD ROSTER</span>
+      <h2 class="f-heading">All 13 Divisions</h2>
+      <p class="f-sub">Click any card to read more. Add character images to <code>images/gotei/</code>.</p>
+    </div>
+    <div class="char-grid" id="charGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- BACK NAV -->
+  <div class="back-nav">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    <a href="espada.html" class="next-btn">The Espada →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer glass">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img src="icons/logo.png" alt="Bleach" class="f-logo" onerror="this.style.display='none'"/>
+        <span class="f-name">BLEACH</span>
+        <span class="f-tagline">Soul Society Archives</span>
+      </div>
+      <div class="f-col">
+        <span class="f-col-title">Factions</span>
+        <a href="gotei.html">Gotei 13</a>
+        <a href="espada.html">The Espada</a>
+        <a href="sternritters.html">Sternritters</a>
+      </div>
+      <div class="f-col">
+        <span class="f-col-title">Navigate</span>
+        <a href="index.html">Home</a>
+        <a href="#roster">Roster</a>
+      </div>
+      <div class="f-dev">
+        <span class="f-col-title">Developer</span>
+        <span class="dev-name">Neel Patel</span>
+        <div class="social-row">
+          <a href="https://github.com/neelpatel112" target="_blank" rel="noreferrer" class="soc-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copy">© 2025 <strong>Neel Patel</strong> — Fan project, not affiliated with Tite Kubo / Shueisha / TV Tokyo.</p>
+      <p class="kanji">護 廷 十 三 隊</p>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/faction.js"></script>
+  <script>
+    // Inline data for Gotei 13
+    window.FACTION_DATA = {
+      name: "gotei",
+      accentVar: "--gotei-blue",
+      characters: [
+        { name:"Ichigo Kurosaki",   rank:"Substitute Soul Reaper",  division:"",             img:"images/gotei/ichigo.jpg",     icon:"⚡", bankai:"Tensa Zangetsu",       ability:"Getsuga Tenshō — moon-fang heaven-piercer; Hollowification; Final Getsuga Tenshō",                             quote:"\"If fate is a millstone, then we are the grist.\"" },
+        { name:"Genryūsai Yamamoto",rank:"Captain-Commander",       division:"1st Division",  img:"images/gotei/yamamoto.jpg",   icon:"🔥", bankai:"Zanka no Tachi",        ability:"Ryūjin Jakka — oldest and most powerful fire-type Zanpakutō; Zanka no Tachi four directional blades",     quote:"\"Those who do not know what war is should not speak of peace.\"" },
+        { name:"Suì-Fēng",          rank:"Captain",                 division:"2nd Division",  img:"images/gotei/suifeng.jpg",    icon:"🐝", bankai:"Jakuhō Raikōben",       ability:"Suzumebachi — two-touch death Shikai; missile-firing Bankai",                                               quote:"\"Speed is the ultimate power.\"" },
+        { name:"Rōjūrō Ōtoribashi", rank:"Captain",                 division:"3rd Division",  img:"images/gotei/rose.jpg",       icon:"🎸", bankai:"Kinshara Butōdan",      ability:"Kinshara — melody-based illusion that forces victims to experience sensation",                               quote:"\"Music is the true expression of the soul.\"" },
+        { name:"Retsu Unohana",     rank:"Captain",                 division:"4th Division",  img:"images/gotei/unohana.jpg",    icon:"🌸", bankai:"Minazuki (true)",        ability:"Minazuki — healing Zanpakutō; true identity the first Kenpachi, master of Kendo",                           quote:"\"There is no wound I cannot heal — and no swordsman I cannot kill.\"" },
+        { name:"Shinji Hirako",     rank:"Captain",                 division:"5th Division",  img:"images/gotei/shinji.jpg",     icon:"👁", bankai:"Sakanade",              ability:"Sakanade — total inversion of all senses; former Visored leader",                                           quote:"\"You can't fight what you can't see — or what you think you can see.\"" },
+        { name:"Byakuya Kuchiki",   rank:"Captain",                 division:"6th Division",  img:"images/gotei/byakuya.jpg",    icon:"🌸", bankai:"Senbonzakura Kageyoshi",ability:"Senbonzakura — thousand cherry petal blades; Shukei: Hakuteiken god-form",                                  quote:"\"Pride is not just a shield — it is the sword that guards everything important.\"" },
+        { name:"Sajin Komamura",    rank:"Captain",                 division:"7th Division",  img:"images/gotei/komamura.jpg",   icon:"🐺", bankai:"Kokujō Tengen Myō'ō",  ability:"Giant warrior Bankai; Humanization Technique — becomes human at the cost of his heart",                   quote:"\"I will fight to protect — even if it costs me my immortality.\"" },
+        { name:"Shunsui Kyōraku",   rank:"Captain-Commander",       division:"8th Division",  img:"images/gotei/shunsui.jpg",    icon:"🎲", bankai:"Katen Kyōkotsu: Karamatsu Shinjū", ability:"Twin-bladed Zanpakutō that makes games real — players must obey the rules or die",          quote:"\"In this game, we must play through to the end.\"" },
+        { name:"Kensei Muguruma",   rank:"Captain",                 division:"9th Division",  img:"images/gotei/kensei.jpg",     icon:"✊", bankai:"Tekken Tachikaze",      ability:"Wind-blade fist weapon Zanpakutō; Visored with hollow mask",                                               quote:"\"Talk less. Hit more.\"" },
+        { name:"Tōshirō Hitsugaya", rank:"Captain",                 division:"10th Division", img:"images/gotei/hitsugaya.jpg",  icon:"❄️", bankai:"Daiguren Hyōrinmaru",   ability:"Heaven and earth ice dragon — most powerful ice-type; Freeze all moisture in a 5-mile radius",           quote:"\"I don't need to explain myself to anyone.\"" },
+        { name:"Kenpachi Zaraki",   rank:"Captain",                 division:"11th Division", img:"images/gotei/kenpachi.jpg",   icon:"⚔", bankai:"Nozarashi",             ability:"Raw power beyond measure; wounds himself to grow stronger; Nozarashi cleaves anything in its path",       quote:"\"The only thing I care about is the fight. The only thing that matters is this blade.\"" },
+        { name:"Mayuri Kurotsuchi", rank:"Captain",                 division:"12th Division", img:"images/gotei/mayuri.jpg",     icon:"⚗", bankai:"Konjiki Ashisogi Jizō", ability:"Paralyzing Zanpakutō; scientist of Soul Society; can modify himself and others in real-time combat",        quote:"\"Science advances by experimentation — you are today's experiment.\"" },
+        { name:"Jūshirō Ukitake",   rank:"Captain",                 division:"13th Division", img:"images/gotei/ukitake.jpg",    icon:"☁️", bankai:"(Sōgyo no Kotowari)",  ability:"Twin blades that absorb and redirect energy attacks; secretly houses the spirit Mimihagi",               quote:"\"A soul that has suffered is not weaker — it is deeper.\"" },
+      ]
+    };
+  </script>
+</body>
+</html>
+ 
