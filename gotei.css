@@ -1,0 +1,9 @@
+/* gotei.css — Blue theme */
+.theme-gotei {
+  --faction-color: #4a90e2;
+  --faction-glow:  rgba(74,144,226,0.3);
+}
+.theme-gotei body { background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(74,144,226,.04) 0%,transparent 55%),#04040d; }
+.theme-gotei .char-card:hover { border-color:rgba(74,144,226,.4); box-shadow:0 20px 70px rgba(74,144,226,.22); }
+.theme-gotei .nav-link.active { background:rgba(74,144,226,.08); }
+ 
