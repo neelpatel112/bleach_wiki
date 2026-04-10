@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sternritters — BLEACH Soul Society Archives</title>
+  <link rel="stylesheet" href="css/shared.css"/>
+  <link rel="stylesheet" href="css/faction.css"/>
+  <link rel="stylesheet" href="css/sternritters.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="theme-stern">
+
+  <div class="cursor-orb" id="cursorOrb"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <nav class="navbar glass" id="navbar">
+    <a class="nav-logo" href="index.html">
+      <img src="icons/logo.png" alt="Bleach" class="logo-img" id="navLogo"
+           onerror="this.style.display='none';document.getElementById('navWordmark').style.display='block'"/>
+      <span class="logo-wordmark" id="navWordmark">BLEACH</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html"        class="nav-link">Home</a>
+      <a href="gotei.html"        class="nav-link">Gotei 13</a>
+      <a href="espada.html"       class="nav-link">The Espada</a>
+      <a href="sternritters.html" class="nav-link active">Sternritters</a>
+    </div>
+    <div class="nav-crest">
+      <svg viewBox="0 0 40 40" fill="none">
+        <polygon points="20,3 23,15 36,15 26,22 30,35 20,28 10,35 14,22 4,15 17,15" stroke="var(--faction-color)" stroke-width="1.2" fill="none"/>
+      </svg>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="gotei.html">Gotei 13</a>
+    <a href="espada.html">The Espada</a>
+    <a href="sternritters.html">Sternritters</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="video-wrap">
+      <video autoplay muted loop playsinline>
+        <source src="Quincy.mp4" type="video/mp4"/>
+      </video>
+      <div class="veil"></div>
+    </div>
+    <canvas class="particles" id="heroParticles"></canvas>
+    <div class="hero-body">
+      <div class="hero-eyebrow reveal" style="--d:.1s">
+        <span class="line"></span><span>Wandenreich · 星十字騎士団</span><span class="line"></span>
+      </div>
+      <h1 class="hero-title reveal" style="--d:.25s">Sternritters</h1>
+      <p class="hero-subtitle-jp reveal" style="--d:.34s">星 十 字 騎 士 団</p>
+      <p class="hero-desc reveal" style="--d:.43s">
+        Ancient Quincy warriors bearing lettered Schrift powers.<br/>
+        They shattered Soul Society in a single night — then came back a second time.
+      </p>
+      <div class="hero-pills reveal" style="--d:.52s">
+        <div class="pill"><span class="pill-num">26</span><span class="pill-label">Letters</span></div>
+        <div class="pill"><span class="pill-num">1000</span><span class="pill-label">Years Hidden</span></div>
+        <div class="pill"><span class="pill-num">2</span><span class="pill-label">Invasions</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint"><div class="sh-line"></div><span>SCROLL</span></div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="faction-overview">
+    <div class="overview-inner">
+      <div class="ov-text reveal from-left">
+        <span class="f-eyebrow">OVERVIEW</span>
+        <h2 class="f-heading">The Star Cross Knights</h2>
+        <p>The Sternritters (星十字騎士団, Sternritter; German for "Star Knights") are the elite Quincy warriors of the Wandenreich — the hidden empire ruled by Yhwach, the Father of the Quincy and progenitor of Ichigo's bloodline. They have lived in secret for over a thousand years, nursing their hatred of Soul Society for the genocide of their kind.</p>
+        <p>Each Sternritter is granted a Schrift (聖文字, lit. "Sacred Writing") — a letter from A to Z that defines a unique, catastrophic power. In the Wandenreich's two invasions, they systematically defeated Shinigami Captains, stole their Bankai, and pushed Soul Society to the edge of extinction.</p>
+        <div class="ov-pillars">
+          <div class="pillar"><span class="pillar-icon">✦</span><span>Schrift Powers</span></div>
+          <div class="pillar"><span class="pillar-icon">🏹</span><span>Quincy Arrows</span></div>
+          <div class="pillar"><span class="pillar-icon">👑</span><span>Yhwach's Blood</span></div>
+        </div>
+      </div>
+      <div class="ov-emblem reveal from-right">
+        <div class="emblem-glow-wrap">
+          <svg class="faction-emblem" viewBox="0 0 200 200" fill="none">
+            <polygon points="100,8 114,58 166,58 122,88 140,140 100,112 60,140 78,88 34,58 86,58" stroke="var(--faction-color)" stroke-width="1.5" opacity=".4"/>
+            <polygon points="100,8 114,58 166,58 122,88 140,140 100,112 60,140 78,88 34,58 86,58" fill="var(--faction-color)" opacity=".04"/>
+            <polygon points="100,35 110,68 145,68 117,87 128,122 100,103 72,122 83,87 55,68 90,68" stroke="var(--faction-color)" stroke-width="1" opacity=".2"/>
+            <circle cx="100" cy="100" r="12" fill="var(--faction-color)" opacity=".85"/>
+            <circle cx="100" cy="100" r="5"  fill="var(--bg-deep)"/>
+          </svg>
+          <div class="emblem-ring-glow"></div>
+        </div>
+        <p class="emblem-label">星 十 字 騎 士 団</p>
+        <p class="emblem-sub">Wandenreich · Star Cross Knights</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTER ROSTER -->
+  <section class="roster-section" id="roster">
+    <div class="roster-header reveal">
+      <span class="f-eyebrow">STERNRITTER ROSTER</span>
+      <h2 class="f-heading">The Lettered Warriors</h2>
+      <p class="f-sub">Each letter is a unique catastrophic power. Add images to <code>images/sternritters/</code>.</p>
+    </div>
+    <div class="char-grid" id="charGrid"></div>
+  </section>
+
+  <div class="back-nav">
+    <a href="espada.html" class="back-btn">← The Espada</a>
+    <a href="index.html"  class="next-btn">Back to Home →</a>
+  </div>
+
+  <footer class="site-footer glass">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img src="icons/logo.png" alt="Bleach" class="f-logo" onerror="this.style.display='none'"/>
+        <span class="f-name">BLEACH</span><span class="f-tagline">Soul Society Archives</span>
+      </div>
+      <div class="f-col">
+        <span class="f-col-title">Factions</span>
+        <a href="gotei.html">Gotei 13</a><a href="espada.html">The Espada</a><a href="sternritters.html">Sternritters</a>
+      </div>
+      <div class="f-col">
+        <span class="f-col-title">Navigate</span>
+        <a href="index.html">Home</a><a href="#roster">Roster</a>
+      </div>
+      <div class="f-dev">
+        <span class="f-col-title">Developer</span>
+        <span class="dev-name">Neel Patel</span>
+        <div class="social-row">
+          <a href="https://github.com/neelpatel112" target="_blank" rel="noreferrer" class="soc-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copy">© 2025 <strong>Neel Patel</strong> — Fan project, not affiliated with Tite Kubo / Shueisha / TV Tokyo.</p>
+      <p class="kanji">星 十 字 騎 士 団</p>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/faction.js"></script>
+  <script>
+    window.FACTION_DATA = {
+      name: "stern",
+      accentVar: "--stern-silver",
+      characters: [
+        { name:"Yhwach",               rank:"His Majesty · Emperor",      division:"Schrift: A — Almighty",   img:"images/sternritters/yhwach.jpg",       icon:"👑", schrift:"A",  ability:"The Almighty — foresight and the power to modify all futures; Auswählen to reclaim power from other Quincy; progenitor of the Quincy bloodline",                  quote:"\"Everything that exists in this world moves according to my will.\"" },
+        { name:"Jugram Haschwalth",    rank:"Grand Master",               division:"Schrift: B — Balance",    img:"images/sternritters/haschwalth.jpg",   icon:"⚖", schrift:"B",  ability:"The Balance — any misfortune that befalls him is redistributed to his enemies; holds Almighty while Yhwach sleeps",                                              quote:"\"The scales of the world must remain balanced. That is my purpose.\"" },
+        { name:"Uryū Ishida",          rank:"Yhwach's Successor",         division:"Schrift: A — Antithesis", img:"images/sternritters/uryu.jpg",         icon:"✦", schrift:"A",  ability:"The Antithesis — reverses anything that has happened between two designated targets; the only survivor of Yhwach's Auswählen as a child",                          quote:"\"I walk my own path. Even if it leads through the heart of the enemy.\"" },
+        { name:"Bazz-B",               rank:"Sternritter",                division:"Schrift: H — Heat",       img:"images/sternritters/bazzb.jpg",        icon:"🔥", schrift:"H",  ability:"The Heat — fires devastating fire attacks from his index fingers; output scales exponentially as he takes damage",                                                 quote:"\"I'll burn everything — starting with you.\"" },
+        { name:"Äs Nödt",             rank:"Sternritter",                division:"Schrift: F — Fear",       img:"images/sternritters/asnödt.jpg",       icon:"🕸", schrift:"F",  ability:"The Fear — injects thorns into victims that amplify the base emotion of fear beyond rational thought, paralyzing them entirely",                                  quote:"\"I don't create fear. I reveal what was always there.\"" },
+        { name:"BG9",                  rank:"Sternritter",                division:"Schrift: K — Killer",     img:"images/sternritters/bg9.jpg",          icon:"🤖", schrift:"K",  ability:"The Killer — a mechanized body housing multiple combat weapon systems; can launch guided missiles and energy blasts simultaneously",                              quote:"\"Target acquired. Elimination commencing.\"" },
+        { name:"Candice Catnipp",      rank:"Sternritter",                division:"Schrift: T — Thunderbolt",img:"images/sternritters/candice.jpg",      icon:"⚡", schrift:"T",  ability:"The Thunderbolt — generates and fires a massive lightning column; can absorb electricity to power herself and redirect the energy",                              quote:"\"You want to mess with me? Fine — but don't cry when I fry you.\"" },
+        { name:"Cang Du",              rank:"Sternritter",                division:"Schrift: I — Iron",       img:"images/sternritters/cangdu.jpg",       icon:"🛡", schrift:"I",  ability:"The Iron — reinforces his skin to a level that deflects virtually all spiritual attacks; stole Hitsugaya's Bankai during the first invasion",                     quote:"\"Strength is not the blade. Strength is the skin that cannot be cut.\"" },
+        { name:"Giselle Gewelle",      rank:"Sternritter",                division:"Schrift: Z — Zombie",     img:"images/sternritters/giselle.jpg",      icon:"🧟", schrift:"Z",  ability:"The Zombie — can zombify anyone who touches her blood, turning them into perfectly obedient undead warriors including Shinigami",                              quote:"\"Death is just the beginning of loyalty.\"" },
+        { name:"Liltotto Lamperd",     rank:"Sternritter",                division:"Schrift: G — Glutton",    img:"images/sternritters/liltotto.jpg",     icon:"👄", schrift:"G",  ability:"The Glutton — a giant mouth capable of consuming anything, including opponents, their abilities, and spiritual constructs",                                      quote:"\"Everything looks edible when you're hungry enough.\"" },
+        { name:"Mask De Masculine",    rank:"Sternritter",                division:"Schrift: S — Superstar",  img:"images/sternritters/mask.jpg",         icon:"🤼", schrift:"S",  ability:"The Superstar — gains power from cheers and applause; becomes exponentially stronger as an audience cheers him on",                                            quote:"\"Everyone loves a winner — and I never lose!\"" },
+        { name:"NaNaNa Najahkoop",     rank:"Sternritter",                division:"Schrift: U — Underbelly", img:"images/sternritters/nanana.jpg",       icon:"🔱", schrift:"U",  ability:"The Underbelly — creates a pressure map of an opponent's spiritual energy, revealing the precise gaps in their power that can be exploited",                    quote:"\"Every defense has a weakness. I find it in seconds.\"" },
+        { name:"Pernida Parnkgjas",    rank:"Sternritter",                division:"Schrift: C — Compulsory", img:"images/sternritters/pernida.jpg",      icon:"🖐", schrift:"C",  ability:"The Compulsory — nerves extend to control the structure of anything touched; can forcibly evolve and adapt its power to overcome any opponent",                quote:"\"I will bend everything — bone, blade, and will.\"" },
+        { name:"Robert Accutrone",     rank:"Sternritter",                division:"Schrift: R — Rangi Range",img:"images/sternritters/robert.jpg",       icon:"🎯", schrift:"R",  ability:"The Rangi Range — compresses the effective range of attacks; his shots bypass conventional defense through spatial compression",                                quote:"\"Range is irrelevant. I always hit what I aim for.\"" },
+      ]
+    };
+  </script>
+</body>
+</html>
+ 
