@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Karakura Town — BLEACH Soul Society Archives</title>
+  <link rel="stylesheet" href="css/shared.css"/>
+  <link rel="stylesheet" href="css/faction.css"/>
+  <link rel="stylesheet" href="css/karakura.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="theme-karakura">
+
+  <div class="cursor-orb" id="cursorOrb"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav class="navbar glass" id="navbar">
+    <a class="nav-logo" href="index.html">
+      <img src="icons/logo.png" alt="Bleach" class="logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-wordmark" style="display:none">BLEACH</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html"        class="nav-link">Home</a>
+      <a href="gotei.html"        class="nav-link">Gotei 13</a>
+      <a href="espada.html"       class="nav-link">The Espada</a>
+      <a href="sternritters.html" class="nav-link">Sternritters</a>
+      <a href="karakura.html"     class="nav-link active">Karakura Town</a>
+    </div>
+    <div class="nav-crest">
+      <svg viewBox="0 0 40 40" fill="none">
+        <!-- House / town symbol -->
+        <polygon points="20,5 36,18 36,36 4,36 4,18" stroke="var(--faction-color)" stroke-width="1.2" fill="none" opacity=".55"/>
+        <rect x="14" y="24" width="12" height="12" stroke="var(--faction-color)" stroke-width="1" fill="none" opacity=".6"/>
+        <circle cx="20" cy="16" r="2.5" fill="var(--faction-color)" opacity=".8"/>
+      </svg>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="gotei.html">Gotei 13</a>
+    <a href="espada.html">The Espada</a>
+    <a href="sternritters.html">Sternritters</a>
+    <a href="karakura.html">Karakura Town</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="video-wrap">
+      <video autoplay muted loop playsinline>
+        <source src="Karakura.mp4" type="video/mp4"/>
+      </video>
+      <div class="veil"></div>
+    </div>
+    <canvas class="particles" id="heroParticles"></canvas>
+
+    <div class="hero-body">
+      <div class="hero-eyebrow reveal" style="--d:.1s">
+        <span class="line"></span>
+        <span>Living World · 空座町</span>
+        <span class="line"></span>
+      </div>
+      <h1 class="hero-title reveal" style="--d:.25s">Karakura Town</h1>
+      <p class="hero-subtitle-jp reveal" style="--d:.34s">空 座 町 · The Living World</p>
+      <p class="hero-desc reveal" style="--d:.43s">
+        A quiet city in Tōkyō Prefecture. The home of Ichigo Kurosaki.<br/>
+        Ground zero for every war between Soul Society, Hueco Mundo, and the Wandenreich.
+      </p>
+      <div class="hero-pills reveal" style="--d:.52s">
+        <div class="pill"><span class="pill-num">3</span><span class="pill-label">Groups</span></div>
+        <div class="pill"><span class="pill-num">20+</span><span class="pill-label">Characters</span></div>
+        <div class="pill"><span class="pill-num">1</span><span class="pill-label">Town. All Wars.</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint"><div class="sh-line"></div><span>SCROLL</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       OVERVIEW
+  ══════════════════════════════════════════ -->
+  <section class="faction-overview">
+    <div class="overview-inner">
+      <div class="ov-text reveal from-left">
+        <span class="f-eyebrow">OVERVIEW</span>
+        <h2 class="f-heading">The Living World's Heart</h2>
+        <p>Karakura Town (空座町, Karakura-chō) is a fictional city in the Western Tokyo region of Japan. Unremarkable to ordinary residents — but recognized by Soul Society as one of the highest concentrations of spiritual energy in the entire living world, making it a focal point for Hollow attacks and an invaluable strategic location.</p>
+        <p>It is home to the Kurosaki family, Ichigo's classmates who would become warriors in their own right, and the Urahara Shop — a hidden gateway between worlds operated by one of Soul Society's most brilliant and dangerous exiles. When the wars came, Karakura paid the price.</p>
+        <div class="ov-pillars">
+          <div class="pillar"><span class="pillar-icon">🏠</span><span>Kurosaki Family</span></div>
+          <div class="pillar"><span class="pillar-icon">🎓</span><span>High School</span></div>
+          <div class="pillar"><span class="pillar-icon">🏪</span><span>Urahara Shop</span></div>
+        </div>
+      </div>
+      <div class="ov-emblem reveal from-right">
+        <div class="emblem-glow-wrap">
+          <svg class="faction-emblem" viewBox="0 0 200 200" fill="none">
+            <!-- stylised town / torii-inspired emblem -->
+            <circle cx="100" cy="100" r="92" stroke="var(--faction-color)" stroke-width="1.5" opacity=".3"/>
+            <!-- Torii gate shape -->
+            <rect x="55"  y="65"  width="90" height="8"  rx="4" fill="var(--faction-color)" opacity=".7"/>
+            <rect x="65"  y="55"  width="70" height="6"  rx="3" fill="var(--faction-color)" opacity=".45"/>
+            <rect x="70"  y="73"  width="8"  height="72" rx="4" fill="var(--faction-color)" opacity=".7"/>
+            <rect x="122" y="73"  width="8"  height="72" rx="4" fill="var(--faction-color)" opacity=".7"/>
+            <!-- Ground line -->
+            <rect x="40"  y="148" width="120" height="3"  rx="1.5" fill="var(--faction-color)" opacity=".35"/>
+            <!-- Sun -->
+            <circle cx="100" cy="40" r="12" stroke="var(--faction-color)" stroke-width="1.5" opacity=".55"/>
+            <circle cx="100" cy="40" r="5"  fill="var(--faction-color)" opacity=".8"/>
+            <!-- Rays -->
+            <line x1="100" y1="20" x2="100" y2="14" stroke="var(--faction-color)" stroke-width="1.5" opacity=".45"/>
+            <line x1="114" y1="26" x2="118" y2="22" stroke="var(--faction-color)" stroke-width="1.5" opacity=".45"/>
+            <line x1="86"  y1="26" x2="82"  y2="22" stroke="var(--faction-color)" stroke-width="1.5" opacity=".45"/>
+          </svg>
+          <div class="emblem-ring-glow"></div>
+        </div>
+        <p class="emblem-label">空 座 町</p>
+        <p class="emblem-sub">Karakura-chō · Living World</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ALL ROSTER SECTIONS
+  ══════════════════════════════════════════ -->
+  <section class="roster-section" id="roster">
+
+    <div class="roster-header reveal">
+      <span class="f-eyebrow">RESIDENTS</span>
+      <h2 class="f-heading">People of Karakura Town</h2>
+    </div>
+
+    <!-- ────────────────────────────────────────
+         GROUP 1 · THE KUROSAKI FAMILY
+    ──────────────────────────────────────── -->
+    <div class="roster-group">
+
+      <div class="group-divider reveal">
+        <div class="gd-line"></div>
+        <span class="gd-label">01 · The Kurosaki Family</span>
+        <div class="gd-line"></div>
+      </div>
+
+      <div class="group-heading reveal" style="--d:.05s">
+        <h3>The Kurosaki Family</h3>
+        <p>The household at the center of everything. A family of healers, warriors, and mysteries — each carrying secrets that would reshape the world.</p>
+      </div>
+
+      <div class="char-grid">
+
+        <!-- ICHIGO -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/kurosaki/ichigo.jpg" alt="Ichigo Kurosaki" loading="lazy"
+                 onerror="window.imgFallback(this,'⚡')"/>
+            <span class="card-badge">Substitute Shinigami</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Kurosaki Family · Son</span>
+            <h3 class="card-name">Ichigo Kurosaki</h3>
+            <p class="card-rank">Substitute Soul Reaper · Protagonist</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Substitute Shinigami · Karakura's Guardian</span>
+            <p class="card-ability">A high school student born with the rare ability to see ghosts. After absorbing Rukia's Shinigami powers, he became a Substitute Soul Reaper — fighting Hollows to protect Karakura Town. Unknown to him, his very existence is the intersection of all three spiritual bloodlines: Shinigami, Hollow, and Quincy.</p>
+            <blockquote class="card-quote">"I'm not Superman — so I can't say anything big like I'll protect everyone. But I'll protect whoever I can."</blockquote>
+          </div>
+        </article>
+
+        <!-- ISSHIN -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/kurosaki/isshin.jpg" alt="Isshin Kurosaki" loading="lazy"
+                 onerror="window.imgFallback(this,'👨')"/>
+            <span class="card-badge">Former Captain</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Kurosaki Family · Father</span>
+            <h3 class="card-name">Isshin Kurosaki</h3>
+            <p class="card-rank">Former Captain of the 10th Division · Isshin Shiba</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Family Doctor · Hidden Shinigami</span>
+            <p class="card-ability">Ichigo's father, hiding his identity as a former Shinigami Captain and head of the Shiba Clan. He gave up his powers to save Masaki from a White Hollow, sealing it inside her in a technique developed with Urahara. A goofy, loud father in public — a devastating warrior when the mask comes off.</p>
+            <blockquote class="card-quote">"A father who couldn't protect his wife from a Hollow has no right to be called strong. I will never let that happen again."</blockquote>
+          </div>
+        </article>
+
+        <!-- MASAKI -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/kurosaki/masaki.jpg" alt="Masaki Kurosaki" loading="lazy"
+                 onerror="window.imgFallback(this,'🌸')"/>
+            <span class="card-badge">Deceased · Quincy</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Kurosaki Family · Mother</span>
+            <h3 class="card-name">Masaki Kurosaki</h3>
+            <p class="card-rank">Pure-Blood Quincy · Ichigo's Mother</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Quincy Warrior · The Origin of Everything</span>
+            <p class="card-ability">A pure-blood Quincy from the Ishida lineage, Masaki was the most powerful Quincy of her generation. She saved a young Isshin from a unique Hollow called White — and in doing so, allowed a Hollow fragment to merge with her soul. This fragment was passed to Ichigo at birth, becoming the foundation of his Hollow powers. She was killed by Grand Fisher when Ichigo was nine.</p>
+            <blockquote class="card-quote">"As long as you are alive, as long as you breathe — you have the power to protect those you love."</blockquote>
+          </div>
+        </article>
+
+        <!-- KARIN -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/kurosaki/karin.jpg" alt="Karin Kurosaki" loading="lazy"
+                 onerror="window.imgFallback(this,'⚽')"/>
+            <span class="card-badge">Karakura Red</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Kurosaki Family · Sister</span>
+            <h3 class="card-name">Karin Kurosaki</h3>
+            <p class="card-rank">Ichigo's Younger Sister · Spiritual Sensitive</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Karakura Red · Football Player</span>
+            <p class="card-ability">Ichigo's tomboyish younger sister with strong spiritual awareness — she can see and sense Hollows clearly, unlike most humans. Known as "Karakura Red" among the local protectors. Though she rarely fights, she has a sharp intellect and far more awareness of the supernatural than she lets on. Later develops a close friendship with Tōshirō Hitsugaya.</p>
+            <blockquote class="card-quote">"I know what you are, ghost. So stop pretending you're invisible and talk to me."</blockquote>
+          </div>
+        </article>
+
+        <!-- YUZU -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/kurosaki/yuzu.jpg" alt="Yuzu Kurosaki" loading="lazy"
+                 onerror="window.imgFallback(this,'🌼')"/>
+            <span class="card-badge">Kurosaki Sister</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Kurosaki Family · Sister</span>
+            <h3 class="card-name">Yuzu Kurosaki</h3>
+            <p class="card-rank">Ichigo's Younger Sister · Heart of the Family</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Caretaker · Gentle Soul</span>
+            <p class="card-ability">Ichigo's gentle, warm-hearted younger sister who keeps the Kurosaki household running. Unlike Karin, Yuzu has minimal spiritual awareness — she senses spiritual beings as a vague, blurry presence rather than seeing them clearly. She is deeply devoted to her family and serves as the emotional anchor that keeps everyone grounded.</p>
+            <blockquote class="card-quote">"I don't care if I can't see them. I know they're there. I can feel it."</blockquote>
+          </div>
+        </article>
+
+      </div><!-- /char-grid -->
+    </div><!-- /roster-group 1 -->
+
+
+    <!-- ────────────────────────────────────────
+         GROUP 2 · KARAKURA HIGH SCHOOL
+    ──────────────────────────────────────── -->
+    <div class="roster-group">
+
+      <div class="group-divider reveal">
+        <div class="gd-line"></div>
+        <span class="gd-label">02 · Karakura High School</span>
+        <div class="gd-line"></div>
+      </div>
+
+      <div class="group-heading reveal" style="--d:.05s">
+        <h3>Karakura High School Students</h3>
+        <p>Ordinary students caught in an extraordinary war. Most would become warriors. All would carry scars.</p>
+      </div>
+
+      <div class="char-grid">
+
+        <!-- ORIHIME -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/orihime.jpg" alt="Orihime Inoue" loading="lazy"
+                 onerror="window.imgFallback(this,'🌺')"/>
+            <span class="card-badge">Classmate · Healer</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Orihime Inoue</h3>
+            <p class="card-rank">Ichigo's Classmate · Future Wife</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Ability</span>
+            <span class="card-power-sub">Shun Shun Rikka — Six fairies of rejection</span>
+            <p class="card-ability">Possesses the Shun Shun Rikka — six fairy-like spirits manifested from hairpins that can reject reality itself. Sōten Kishun heals any wound by rejecting the event that caused it. Santen Kesshun forms an impenetrable shield. Tsubaki fires offensive energy. Her power is described as closer to the Soul King's than any other human's.</p>
+            <blockquote class="card-quote">"I have always been afraid. But I still move forward — because there are people I want to protect."</blockquote>
+          </div>
+        </article>
+
+        <!-- CHAD -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/chad.jpg" alt="Yasutora Sado" loading="lazy"
+                 onerror="window.imgFallback(this,'💪')"/>
+            <span class="card-badge">Classmate · Fullbring</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Yasutora "Chad" Sado</h3>
+            <p class="card-rank">Ichigo's Classmate · Soul-Armored Warrior</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Ability</span>
+            <span class="card-power-sub">Brazo Derecha de Gigante / Brazo Izquierda del Diablo</span>
+            <p class="card-ability">Chad manifests spiritual armor on both arms. His right arm, Brazo Derecha de Gigante, channels defensive Fullbring power for attack and defense. His left arm, Brazo Izquierda del Diablo, fires a devastating Cero-like energy blast. A man of few words — he lives by a code of protecting others above himself.</p>
+            <blockquote class="card-quote">"I don't fight for my own power. I fight for others. That is the only reason I throw a punch."</blockquote>
+          </div>
+        </article>
+
+        <!-- URYU -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/uryu.jpg" alt="Uryū Ishida" loading="lazy"
+                 onerror="window.imgFallback(this,'🏹')"/>
+            <span class="card-badge">Quincy · Classmate</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Uryū Ishida</h3>
+            <p class="card-rank">Last Quincy (self-declared) · Sternritter A</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Ability</span>
+            <span class="card-power-sub">Quincy Vollständig · The Antithesis</span>
+            <p class="card-ability">A pureblooded Quincy who sees himself as the last of his kind and sworn enemy of Shinigami — yet repeatedly fights alongside Ichigo. Master archer who gathers Reishi from the environment to form arrows and constructs. In the final arc, revealed to be chosen by Yhwach as his successor, carrying the Schrift A — The Antithesis.</p>
+            <blockquote class="card-quote">"I do not cooperate with Shinigami. But I will cooperate with you, Kurosaki. That much hasn't changed."</blockquote>
+          </div>
+        </article>
+
+        <!-- TATSUKI -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/tatsuki.jpg" alt="Tatsuki Arisawa" loading="lazy"
+                 onerror="window.imgFallback(this,'🥋')"/>
+            <span class="card-badge">Childhood Friend</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Tatsuki Arisawa</h3>
+            <p class="card-rank">Ichigo's Childhood Friend · Karate Champion</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Second-Degree Black Belt · Spiritual Sensitive</span>
+            <p class="card-ability">Ichigo's oldest friend and Orihime's closest companion. A nationally ranked female karate fighter with developing spiritual awareness — she can sense and partially see spiritual beings. Unlike Chad and Orihime, she has no supernatural powers, yet her courage never wavers in the face of things far beyond human capability.</p>
+            <blockquote class="card-quote">"I may not be able to see them clearly. But I can still throw a punch at anything trying to hurt my friends."</blockquote>
+          </div>
+        </article>
+
+        <!-- KEIGO -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/keigo.jpg" alt="Keigo Asano" loading="lazy"
+                 onerror="window.imgFallback(this,'😄')"/>
+            <span class="card-badge">Ichigo's Friend</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Keigo Asano</h3>
+            <p class="card-rank">Ichigo's Loud Loyal Friend</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Comic Relief · Reliable Friend</span>
+            <p class="card-ability">Ichigo's boisterous, dramatic classmate who provides comic relief but shows genuine loyalty and bravery when it counts. His sister Mizuho briefly harbors Rangiku Matsumoto. Despite having no spiritual power, Keigo never abandons his friends and demonstrates unexpected courage during the Fullbring arc when the town comes under attack.</p>
+            <blockquote class="card-quote">"Ichigo — you always disappear without explaining anything! Do you know how worried I get?!"</blockquote>
+          </div>
+        </article>
+
+        <!-- MIZUIRO -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/mizuiro.jpg" alt="Mizuiro Kojima" loading="lazy"
+                 onerror="window.imgFallback(this,'😏')"/>
+            <span class="card-badge">Ichigo's Friend</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Mizuiro Kojima</h3>
+            <p class="card-rank">Ichigo's Quiet, Sharp-Witted Friend</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Observer · Calm Under Pressure</span>
+            <p class="card-ability">Ichigo's mild-mannered, soft-spoken classmate who is far more perceptive than he appears. He has a habit of attracting older women and maintains a calm, collected demeanor even in genuinely dangerous supernatural situations. During the Fullbring arc, he demonstrates surprising awareness of the threats around him and acts with quiet, decisive bravery.</p>
+            <blockquote class="card-quote">"I notice a lot more than people think. I just choose not to say anything most of the time."</blockquote>
+          </div>
+        </article>
+
+        <!-- CHIZURU -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/chizuru.jpg" alt="Chizuru Honshō" loading="lazy"
+                 onerror="window.imgFallback(this,'💕')"/>
+            <span class="card-badge">Classmate</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Chizuru Honshō</h3>
+            <p class="card-rank">Classmate · Orihime's Self-Proclaimed Admirer</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Classmate · Comic Character</span>
+            <p class="card-ability">A cheerful, dramatic classmate who loudly declares her love for Orihime Inoue at every opportunity. Despite her over-the-top personality, she is a genuine, caring friend who cares deeply about the people around her. Her antics often provide levity during the heavier moments of Karakura's daily life between supernatural incidents.</p>
+            <blockquote class="card-quote">"Orihime is everything. Anyone who disagrees will answer to me — personally!"</blockquote>
+          </div>
+        </article>
+
+        <!-- MICHIRU -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/highschool/michiru.jpg" alt="Michiru Ogawa" loading="lazy"
+                 onerror="window.imgFallback(this,'📚')"/>
+            <span class="card-badge">Classmate</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Karakura High · Class 1-3</span>
+            <h3 class="card-name">Michiru Ogawa</h3>
+            <p class="card-rank">Classmate · Quiet Presence</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Classmate · Background Friend</span>
+            <p class="card-ability">A shy, reserved classmate and one of Orihime's close friends. Michiru generally stays on the fringes of the group's adventures, representing the ordinary students of Karakura High who live alongside the supernatural without ever being fully pulled into it. Her gentle nature and loyalty to her friends makes her a quiet but steady presence in Ichigo's everyday life.</p>
+            <blockquote class="card-quote">"I don't always understand what's happening — but I trust Orihime completely."</blockquote>
+          </div>
+        </article>
+
+      </div><!-- /char-grid -->
+    </div><!-- /roster-group 2 -->
+
+
+    <!-- ────────────────────────────────────────
+         GROUP 3 · URAHARA SHOP
+    ──────────────────────────────────────── -->
+    <div class="roster-group">
+
+      <div class="group-divider reveal">
+        <div class="gd-line"></div>
+        <span class="gd-label">03 · Urahara Shop</span>
+        <div class="gd-line"></div>
+      </div>
+
+      <div class="group-heading reveal" style="--d:.05s">
+        <h3>Urahara Shop Residents</h3>
+        <p>A candy store on the surface. A gateway between worlds beneath. Run by exiles, geniuses, and warriors hiding in plain sight.</p>
+      </div>
+
+      <div class="char-grid">
+
+        <!-- URAHARA -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/urahara/urahara.jpg" alt="Kisuke Urahara" loading="lazy"
+                 onerror="window.imgFallback(this,'🎩')"/>
+            <span class="card-badge">Former Captain · Shop Owner</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Urahara Shop · Owner</span>
+            <h3 class="card-name">Kisuke Urahara</h3>
+            <p class="card-rank">Former 12th Division Captain · Creator of the Hōgyoku</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Bankai</span>
+            <span class="card-power-sub">Kannonbiraki Benihime Aratame</span>
+            <p class="card-ability">The most brilliant scientific mind in Soul Society's history — exiled under false pretenses for creating the Hōgyoku. His Zanpakutō Benihime fires crimson energy nets and barriers in Shikai. His Bankai restructures anything it touches at a fundamental level. He is the architect of nearly every plan that defeats Aizen, and the one who trained Ichigo.</p>
+            <blockquote class="card-quote">"I am neither your ally nor your enemy right now. I am simply a man who is very, very interested in how this ends."</blockquote>
+          </div>
+        </article>
+
+        <!-- YORUICHI -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/urahara/yoruichi.jpg" alt="Yoruichi Shihōin" loading="lazy"
+                 onerror="window.imgFallback(this,'🐈')"/>
+            <span class="card-badge">Former Captain · Flash Goddess</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Urahara Shop · Resident</span>
+            <h3 class="card-name">Yoruichi Shihōin</h3>
+            <p class="card-rank">Former 2nd Division Captain · Flash Goddess</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Ability</span>
+            <span class="card-power-sub">Shunko — lightning body combat</span>
+            <p class="card-ability">The "Flash Goddess" — the fastest Shinigami in Soul Society's history and a master of Shunpō (Flash Step). Her Shunko technique fuses Kidō directly into her body, wreathing her in lightning and amplifying her physical strikes to devastating levels. Can transform into a black cat at will. Trained Ichigo in Bankai and mentored Suì-Fēng in her youth.</p>
+            <blockquote class="card-quote">"If you want to keep up with me, you'd better learn to move — because I don't wait for anyone."</blockquote>
+          </div>
+        </article>
+
+        <!-- TESSAI -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/urahara/tessai.jpg" alt="Tessai Tsukabishi" loading="lazy"
+                 onerror="window.imgFallback(this,'🧔')"/>
+            <span class="card-badge">Former Kidō Corps Chief</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Urahara Shop · Employee</span>
+            <h3 class="card-name">Tessai Tsukabishi</h3>
+            <p class="card-rank">Former Kidō Corps Chief · Urahara's Loyal Companion</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Ability</span>
+            <span class="card-power-sub">Kidō Master — Hadō & Bakudō</span>
+            <p class="card-ability">The former head of the Kidō Corps — the most powerful practitioner of Kidō in Soul Society's history. Exiled alongside Urahara, he now works at the shop under a human gigai. Capable of performing high-level Kidō spells without incantation. His Hadō and Bakudō spells are deployed at a scale and precision no active Shinigami can match.</p>
+            <blockquote class="card-quote">"I may wear an apron now. But I assure you — my Kidō has not grown rusty."</blockquote>
+          </div>
+        </article>
+
+        <!-- JINTA -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/urahara/jinta.jpg" alt="Jinta Hanakari" loading="lazy"
+                 onerror="window.imgFallback(this,'🧒')"/>
+            <span class="card-badge">Child Employee</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Urahara Shop · Employee</span>
+            <h3 class="card-name">Jinta Hanakari</h3>
+            <p class="card-rank">Child Employee · Rambunctious Worker</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Shop Worker · Combat Potential</span>
+            <p class="card-ability">A young boy working at Urahara Shop who is loud, boisterous, and constantly bullies Ururu despite clearly caring about her. Despite his young appearance, he possesses significant spiritual power and combat training under Urahara's guidance. Wields an oversized metal rod in combat and has the instincts of a trained fighter beneath his childish exterior.</p>
+            <blockquote class="card-quote">"Don't look at me like that — I'm stronger than I look, and I look plenty strong already!"</blockquote>
+          </div>
+        </article>
+
+        <!-- URURU -->
+        <article class="char-card">
+          <div class="card-img">
+            <img src="images/karakura/urahara/ururu.jpg" alt="Ururu Tsumugiya" loading="lazy"
+                 onerror="window.imgFallback(this,'🤍')"/>
+            <span class="card-badge">Child Employee</span>
+          </div>
+          <div class="card-body">
+            <span class="card-division">Urahara Shop · Employee</span>
+            <h3 class="card-name">Ururu Tsumugiya</h3>
+            <p class="card-rank">Child Employee · Quiet Powerhouse</p>
+            <div class="card-divider"></div>
+            <span class="card-power-label">Role</span>
+            <span class="card-power-sub">Shop Worker · Dangerous Combat Mode</span>
+            <p class="card-ability">A soft-spoken, gentle girl who works alongside Jinta at Urahara Shop. Her true nature is deliberately mysterious — when under sufficient threat, she enters an instinctual combat state of extraordinary power that even she cannot fully control. She is implied to be something far beyond an ordinary human, possibly a specialized artificial construct created by Urahara.</p>
+            <blockquote class="card-quote">"I… I will do my best. I won't let anyone get hurt. I promise."</blockquote>
+          </div>
+        </article>
+
+      </div><!-- /char-grid -->
+    </div><!-- /roster-group 3 -->
+
+  </section><!-- /roster-section -->
+
+  <!-- BACK NAV -->
+  <div class="back-nav">
+    <a href="sternritters.html" class="back-btn">← Sternritters</a>
+    <a href="index.html"        class="next-btn">Back to Home →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer glass">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img src="icons/logo.png" alt="Bleach" class="f-logo" onerror="this.style.display='none'"/>
+        <span class="f-name">BLEACH</span>
+        <span class="f-tagline">Soul Society Archives</span>
+      </div>
+      <div class="f-col">
+        <span class="f-col-title">Factions</span>
+        <a href="gotei.html">Gotei 13</a>
+        <a href="espada.html">The Espada</a>
+        <a href="sternritters.html">Sternritters</a>
+        <a href="karakura.html">Karakura Town</a>
+      </div>
+      <div class="f-col">
+        <span class="f-col-title">Navigate</span>
+        <a href="index.html">Home</a>
+        <a href="#roster">Residents</a>
+      </div>
+      <div class="f-dev">
+        <span class="f-col-title">Developer</span>
+        <span class="dev-name">Neel Patel</span>
+        <div class="social-row">
+          <a href="https://github.com/neelpatel112" target="_blank" rel="noreferrer" class="soc-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a href="https://vercel.com" target="_blank" rel="noreferrer" class="soc-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+            Vercel
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copy">© 2025 <strong>Neel Patel</strong> — Fan project, not affiliated with Tite Kubo / Shueisha / TV Tokyo.</p>
+      <p class="kanji">空 座 町</p>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/faction.js"></script>
+</body>
+</html>
+ 
