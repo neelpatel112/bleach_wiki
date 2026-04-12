@@ -103,7 +103,20 @@
 
 .faction-cards {
   max-width:1200px; margin:0 auto;
-  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  display:grid; grid-template-columns:repeat(2,1fr); gap:24px;
+}
+
+/* Karakura card — amber/warm theme */
+.karakura-card:hover {
+  border-color: rgba(232,160,32,.45);
+  box-shadow: 0 24px 80px rgba(232,160,32,.22);
+}
+.karakura-veil {
+  background: linear-gradient(to top, rgba(4,4,13,.97) 0%, rgba(4,4,13,.6) 45%, transparent 100%);
+}
+.karakura-veil::after {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(232,160,32,.1) 0%, transparent 70%);
 }
 
 .faction-card {
@@ -259,10 +272,13 @@
 
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media(max-width:1100px) {
-  .faction-cards { grid-template-columns:1fr; max-width:560px; }
+  .faction-cards { grid-template-columns:1fr 1fr; max-width:760px; }
   .faction-card { min-height:400px; }
   .proto-inner { grid-template-columns:1fr; gap:40px; }
   .proto-frame { max-width:360px; aspect-ratio:3/4; }
+}
+@media(max-width:700px) {
+  .faction-cards { grid-template-columns:1fr; max-width:480px; }
 }
 @media(max-width:768px) {
   .story-section,.factions-section,.protagonist-section,.quote-strip { padding:80px 24px; }
